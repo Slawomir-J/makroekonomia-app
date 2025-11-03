@@ -1,0 +1,580 @@
+.money-creation-calculator {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .money-creation-calculator {
+    background-color: #1f2937;
+  }
+}
+
+.calculator-intro {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f0f9ff;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .calculator-intro {
+    background-color: #1e3a8a;
+  }
+}
+
+.calculator-intro h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+}
+
+.calculator-intro p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.input-section {
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  border: 2px solid var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .input-section {
+    background-color: #111827;
+  }
+}
+
+.input-section h4 {
+  margin: 0 0 1.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.input-group input[type="number"] {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: white;
+  color: var(--text-color);
+  max-width: 200px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input-group input[type="number"] {
+    background-color: #374151;
+  }
+}
+
+.input-group input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-group input[type="range"] {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: var(--border-color);
+  outline: none;
+}
+
+.input-group input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.input-group input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border: none;
+}
+
+.unit {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+.value-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+
+.formula-display {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .formula-display {
+    background-color: #1f2937;
+  }
+}
+
+.formula-display strong {
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.formula-display .formula {
+  font-family: 'Courier New', monospace;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.result-summary {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #d1fae5;
+  border-radius: 0.5rem;
+  border-left: 4px solid #10b981;
+}
+
+@media (prefers-color-scheme: dark) {
+  .result-summary {
+    background-color: #065f46;
+  }
+}
+
+.result-summary p {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+.results-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.result-card {
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  border: 2px solid var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .result-card {
+    background-color: #111827;
+  }
+}
+
+.result-card.primary {
+  background-color: #f0f9ff;
+  border-color: var(--primary-color);
+  border-width: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .result-card.primary {
+    background-color: #1e3a8a;
+  }
+}
+
+.result-card h4 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+.result-note,
+.result-formula {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.result-formula {
+  font-family: 'Courier New', monospace;
+}
+
+.toggle-details-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .toggle-details-btn {
+    background-color: #374151;
+  }
+}
+
+.toggle-details-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.calculation-details {
+  padding: 2rem;
+  background-color: #fef3c7;
+  border-radius: 0.75rem;
+  border-left: 4px solid #f59e0b;
+  margin: 1rem 0 2rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .calculation-details {
+    background-color: #78350f;
+  }
+}
+
+.calculation-details h4 {
+  margin: 0 0 1.5rem 0;
+  color: #92400e;
+  font-size: 1.2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .calculation-details h4 {
+    color: #fef3c7;
+  }
+}
+
+.calc-step {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .calc-step {
+    background-color: #1f2937;
+  }
+}
+
+.calc-step strong {
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.calc-step p {
+  margin: 0.25rem 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.calc-step .formula {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .calc-step .formula {
+    background-color: #111827;
+  }
+}
+
+.calc-result {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 0.5rem !important;
+}
+
+.rounds-table {
+  margin: 2rem 0;
+}
+
+.rounds-table h4 {
+  color: #92400e;
+  margin-bottom: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rounds-table h4 {
+    color: #fef3c7;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.rounds-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rounds-table table {
+    background-color: #1f2937;
+  }
+}
+
+.rounds-table th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.rounds-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.rounds-table tr:hover {
+  background-color: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rounds-table tr:hover {
+    background-color: #374151;
+  }
+}
+
+.rounds-table tr.first-round {
+  background-color: #dbeafe;
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rounds-table tr.first-round {
+    background-color: #1e3a8a;
+  }
+}
+
+.rounds-table tr.continuation-row {
+  background-color: #f3f4f6;
+  text-align: center;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.rounds-table tr.total-row {
+  background-color: #10b981;
+  color: white;
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rounds-table tr.total-row {
+    background-color: #047857;
+  }
+}
+
+.rounds-table tr.total-row td {
+  border-bottom: none;
+  color: white;
+}
+
+.rounds-table td.number {
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+.rounds-table td.reserves {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.rounds-table td.loans {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.rounds-table td.cumulative {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.chart-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  border: 2px solid var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .chart-section {
+    background-color: #111827;
+  }
+}
+
+.chart-section h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+}
+
+.chart-description {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.money-chart-svg {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .money-chart-svg {
+    background-color: #1f2937;
+  }
+}
+
+.interpretation-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #dbeafe;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .interpretation-box {
+    background-color: #1e3a8a;
+  }
+}
+
+.interpretation-box h4 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+}
+
+.interpretation-box ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.interpretation-box li {
+  margin: 1rem 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.interpretation-box strong {
+  color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .money-creation-calculator {
+    padding: 1rem;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .results-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+  }
+
+  .chart-section {
+    padding: 1rem;
+  }
+
+  .rounds-table {
+    font-size: 0.8rem;
+  }
+
+  .rounds-table th,
+  .rounds-table td {
+    padding: 0.5rem 0.25rem;
+  }
+}
