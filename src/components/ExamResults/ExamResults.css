@@ -1,0 +1,355 @@
+.exam-results-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.exam-results-card {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .exam-results-card {
+    background-color: #1f2937;
+  }
+}
+
+.results-header h1 {
+  margin: 0 0 2rem 0;
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+/* Okrąg z wynikiem */
+.score-circle {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+
+.score-circle.excellent {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+}
+
+.score-circle.good {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+}
+
+.score-circle.fair {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+}
+
+.score-circle.poor {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.4);
+}
+
+.score-percentage {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.score-fraction {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.score-grade {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+}
+
+/* Komunikat */
+.result-message {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.result-message.excellent {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.result-message.good {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.result-message.fair {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.result-message.poor {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .result-message.excellent {
+    background-color: #064e3b;
+    color: #6ee7b7;
+  }
+
+  .result-message.good {
+    background-color: #1e3a8a;
+    color: #93c5fd;
+  }
+
+  .result-message.fair {
+    background-color: #78350f;
+    color: #fcd34d;
+  }
+
+  .result-message.poor {
+    background-color: #7f1d1d;
+    color: #fca5a5;
+  }
+}
+
+.message-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.result-message h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+}
+
+.result-message p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Statystyki */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.stat-item {
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-item {
+    background-color: #374151;
+    border-color: #4b5563;
+  }
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-content {
+  flex: 1;
+  text-align: left;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-label {
+    color: #9ca3af;
+  }
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-color);
+  line-height: 1;
+}
+
+/* Słabe obszary */
+.weak-areas-section {
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+@media (prefers-color-scheme: dark) {
+  .weak-areas-section {
+    background-color: #78350f;
+    border-left-color: #fbbf24;
+  }
+}
+
+.weak-areas-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #92400e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .weak-areas-header {
+    color: #fcd34d;
+  }
+}
+
+.weak-areas-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.weak-areas-intro {
+  margin: 0 0 1rem 0;
+  color: #78350f;
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  .weak-areas-intro {
+    color: #fde68a;
+  }
+}
+
+.weak-areas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.weak-areas-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #92400e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .weak-areas-list li {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fde68a;
+  }
+}
+
+/* Przyciski akcji */
+.results-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+}
+
+@media (max-width: 640px) {
+  .results-actions {
+    flex-direction: column;
+  }
+}
+
+.retry-btn,
+.home-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.retry-btn:hover,
+.home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Wskazówka */
+.study-tip {
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #e0e7ff;
+  border-radius: 0.75rem;
+  color: #3730a3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .study-tip {
+    background-color: #1e3a8a;
+    color: #c7d2fe;
+  }
+}
+
+.study-tip strong {
+  color: #4338ca;
+}
+
+@media (prefers-color-scheme: dark) {
+  .study-tip strong {
+    color: #a5b4fc;
+  }
+}

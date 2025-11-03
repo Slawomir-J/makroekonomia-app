@@ -1,4 +1,4 @@
-import { Coins, Building2, TrendingUp, RefreshCw, CreditCard, Wallet, Calculator, AlertCircle, ArrowRight } from 'lucide-react';
+import { Coins, Building2, TrendingUp, RefreshCw, CreditCard, Wallet, Calculator, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import '../Chapter20/Chapter20.css';
 

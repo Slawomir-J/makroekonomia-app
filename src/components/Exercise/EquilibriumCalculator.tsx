@@ -24,8 +24,8 @@ export default function EquilibriumCalculator() {
   const equilibriumC = autonomousConsumption + mpc * equilibriumY;
   const netExports = exports - imports;
 
-  // Punkty do wykresu
-  const generateChartPoints = () => {
+  // Reserved for future chart implementation
+  /* const generateChartPoints = () => {
     const points = [];
     const maxY = equilibriumY * 1.5;
     const step = maxY / 50;
@@ -43,7 +43,7 @@ export default function EquilibriumCalculator() {
     return points;
   };
 
-  const chartPoints = generateChartPoints();
+  const chartPoints = generateChartPoints(); */
   const maxY = equilibriumY * 1.5;
 
   return (

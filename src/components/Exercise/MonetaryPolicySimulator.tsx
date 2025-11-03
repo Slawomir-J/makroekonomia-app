@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TrendingUp, TrendingDown, Target, AlertCircle, Info } from 'lucide-react';
+import { TrendingUp, TrendingDown, Info } from 'lucide-react';
 import './MonetaryPolicySimulator.css';
 
 export default function MonetaryPolicySimulator() {

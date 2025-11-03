@@ -11,6 +11,19 @@ export default function Home() {
         </p>
       </header>
 
+      <section className="exam-mode-cta">
+        <div className="cta-content">
+          <div className="cta-icon">🎯</div>
+          <div className="cta-text">
+            <h2>Gotowy na sprawdzian?</h2>
+            <p>Sprawdź swoją wiedzę w Trybie Egzamin - losowe pytania teoretyczne i obliczeniowe ze wszystkich rozdziałów!</p>
+          </div>
+          <Link to="/exam-mode" className="cta-button">
+            Rozpocznij Tryb Egzamin →
+          </Link>
+        </div>
+      </section>
+
       <section className="home-features">
         <div className="feature-card">
           <div className="feature-icon">🎯</div>

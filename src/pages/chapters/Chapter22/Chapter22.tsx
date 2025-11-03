@@ -1,4 +1,4 @@
-import { TrendingUp, TrendingDown, DollarSign, AlertTriangle, Users, Globe, ArrowRight, Calculator } from 'lucide-react';
+import { TrendingUp, TrendingDown, DollarSign, AlertTriangle, Users, Globe, Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import '../Chapter20/Chapter20.css';
 

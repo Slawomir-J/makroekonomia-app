@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TrendingUp, Building2, Info, Coins } from 'lucide-react';
+import { Building2, Info, Coins } from 'lucide-react';
 import './MoneyCreationCalculator.css';
 
 export default function MoneyCreationCalculator() {
