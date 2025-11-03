@@ -1,14 +1,17 @@
 import { Target, BookOpen, TrendingUp, Users, DollarSign, AlertCircle, Calculator, Globe, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import GlossaryPanel from '../../../components/GlossaryPanel/GlossaryPanel';
 import './Chapter20.css';
 
 export default function Chapter20() {
   return (
     <div className="chapter">
-      <header className="chapter-header">
-        <span className="chapter-badge">Rozdział 20</span>
-        <h1>Wprowadzenie do makroekonomii i rachunku dochodu narodowego</h1>
-      </header>
+      <div className="chapter-with-glossary">
+        <div className="chapter-main-content">
+          <header className="chapter-header">
+            <span className="chapter-badge">Rozdział 20</span>
+            <h1>Wprowadzenie do makroekonomii i rachunku dochodu narodowego</h1>
+          </header>
 
       <section className="chapter-section">
         <h2><Target className="section-icon" /> Cele rozdziału</h2>
@@ -321,9 +324,13 @@ export default function Chapter20() {
         </div>
       </section>
 
-      <div className="chapter-nav">
-        <button className="btn-secondary" disabled>← Poprzedni rozdział</button>
-        <Link to="/chapter/20/quiz" className="btn-primary">Quiz: Sprawdź wiedzę →</Link>
+          <div className="chapter-nav">
+            <button className="btn-secondary" disabled>← Poprzedni rozdział</button>
+            <Link to="/chapter/20/quiz" className="btn-primary">Quiz: Sprawdź wiedzę →</Link>
+          </div>
+        </div>
+
+        <GlossaryPanel />
       </div>
     </div>
   );

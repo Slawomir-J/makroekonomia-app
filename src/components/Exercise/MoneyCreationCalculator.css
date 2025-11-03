@@ -283,27 +283,27 @@
 
 .calculation-details {
   padding: 2rem;
-  background-color: #fef3c7;
+  background-color: var(--primary-light);
   border-radius: 0.75rem;
-  border-left: 4px solid #f59e0b;
+  border-left: 4px solid var(--primary-dark);
   margin: 1rem 0 2rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
   .calculation-details {
-    background-color: #78350f;
+    background-color: #1e3a8a;
   }
 }
 
 .calculation-details h4 {
   margin: 0 0 1.5rem 0;
-  color: #92400e;
+  color: var(--primary-text);
   font-size: 1.2rem;
 }
 
 @media (prefers-color-scheme: dark) {
   .calculation-details h4 {
-    color: #fef3c7;
+    color: var(--primary-light);
   }
 }
 
@@ -362,13 +362,13 @@
 }
 
 .rounds-table h4 {
-  color: #92400e;
+  color: var(--primary-text);
   margin-bottom: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
   .rounds-table h4 {
-    color: #fef3c7;
+    color: var(--primary-light);
   }
 }
 
@@ -458,12 +458,12 @@
 }
 
 .rounds-table td.reserves {
-  color: #f59e0b;
+  color: var(--primary-text);
   font-weight: 600;
 }
 
 .rounds-table td.loans {
-  color: #10b981;
+  color: var(--success-text);
   font-weight: 600;
 }
 

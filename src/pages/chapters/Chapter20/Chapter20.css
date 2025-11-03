@@ -1,6 +1,24 @@
 .chapter {
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.chapter-with-glossary {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .chapter-with-glossary {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chapter-main-content {
+  min-width: 0;
 }
 
 .back-link {
@@ -38,7 +56,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%);
   color: white;
   text-decoration: none;
   border-radius: 0.75rem;
@@ -149,20 +167,20 @@
 }
 
 .formula {
-  background-color: #fef3c7;
+  background-color: var(--primary-light);
   padding: 1rem;
   border-radius: 0.5rem;
   font-family: 'Courier New', monospace;
   font-size: 1.05rem;
   text-align: center;
   font-weight: 600;
-  color: #92400e;
+  color: var(--primary-text);
   margin: 0.75rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
   .formula {
-    background-color: #78350f;
+    background-color: #1e3a8a;
     color: #fef3c7;
   }
 }
@@ -178,14 +196,14 @@
 @media (prefers-color-scheme: dark) {
   .formula-box {
     background-color: #451a03;
-    border-color: #f59e0b;
+    border-color: var(--primary-dark);
   }
 }
 
 .formula-box h4 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #92400e;
+  color: var(--primary-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -356,7 +374,7 @@
 }
 
 .example-box {
-  background-color: #fef3c7;
+  background-color: var(--primary-light);
   padding: 1.5rem;
   border-radius: 0.75rem;
   margin: 1.5rem 0;
@@ -365,7 +383,7 @@
 
 @media (prefers-color-scheme: dark) {
   .example-box {
-    background-color: #78350f;
+    background-color: #1e3a8a;
   }
 }
 
@@ -395,7 +413,7 @@
   background-color: white;
   padding: 1.25rem;
   border-radius: 0.5rem;
-  border-left: 3px solid #f59e0b;
+  border-left: 3px solid var(--primary-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -417,17 +435,17 @@
 }
 
 .calc-result {
-  background-color: #fef3c7;
+  background-color: var(--primary-light);
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   font-weight: 600;
   margin-top: 1rem !important;
-  color: #92400e;
+  color: var(--primary-text);
 }
 
 @media (prefers-color-scheme: dark) {
   .calc-result {
-    background-color: #78350f;
+    background-color: #1e3a8a;
     color: #fef3c7;
   }
 }

@@ -26,11 +26,11 @@
 .quiz-progress {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #e0e7ff;
+  background-color: var(--primary-light);
   border-radius: 2rem;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--primary-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,8 +96,9 @@
 }
 
 .option-item.correct {
-  border-color: var(--success-color);
-  background-color: #d1fae5;
+  border-color: var(--success-dark);
+  background-color: var(--success-light);
+  color: var(--success-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -107,8 +108,9 @@
 }
 
 .option-item.wrong {
-  border-color: var(--error-color);
-  background-color: #fee2e2;
+  border-color: var(--error-medium);
+  background-color: var(--error-light);
+  color: var(--error-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -165,8 +167,8 @@
 }
 
 .explanation.correct {
-  background-color: #d1fae5;
-  border-color: var(--success-color);
+  background-color: var(--success-lightest);
+  border-color: var(--success-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -176,8 +178,8 @@
 }
 
 .explanation.incorrect {
-  background-color: #fee2e2;
-  border-color: var(--error-color);
+  background-color: var(--error-light);
+  border-color: var(--error-medium);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -198,11 +200,11 @@
 }
 
 .explanation.correct .explanation-header {
-  color: var(--success-color);
+  color: var(--success-text);
 }
 
 .explanation.incorrect .explanation-header {
-  color: var(--error-color);
+  color: var(--error-text);
 }
 
 .explanation p {
@@ -276,28 +278,48 @@
   margin: 2rem 0;
   padding: 2rem;
   border-radius: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%);
+  border: 2px solid var(--primary-dark);
 }
 
 .score-display.pass {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--success-medium) 0%, var(--success-dark) 100%);
+  border: 2px solid var(--success-dark);
 }
 
 .score-display.fail {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: linear-gradient(135deg, var(--error-light) 0%, var(--error-medium) 100%);
+  border: 2px solid var(--error-medium);
 }
 
 .score-number {
   font-size: 4rem;
   font-weight: bold;
-  color: white;
+  color: var(--primary-text);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
 
+.score-display.pass .score-number {
+  color: var(--success-text);
+}
+
+.score-display.fail .score-number {
+  color: var(--error-text);
+}
+
 .score-fraction {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--primary-text);
+  opacity: 0.8;
+}
+
+.score-display.pass .score-fraction {
+  color: var(--success-text);
+}
+
+.score-display.fail .score-fraction {
+  color: var(--error-text);
 }
 
 .result-message {
@@ -311,8 +333,9 @@
 }
 
 .result-message.success {
-  background-color: #d1fae5;
-  color: var(--success-color);
+  background-color: var(--success-lightest);
+  color: var(--success-text);
+  border: 2px solid var(--success-medium);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -322,8 +345,9 @@
 }
 
 .result-message.warning {
-  background-color: #fef3c7;
-  color: var(--warning-color);
+  background-color: var(--primary-light);
+  color: var(--primary-text);
+  border: 2px solid var(--primary-dark);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -333,8 +357,9 @@
 }
 
 .result-message.error {
-  background-color: #fee2e2;
-  color: var(--error-color);
+  background-color: var(--error-light);
+  color: var(--error-text);
+  border: 2px solid var(--error-medium);
 }
 
 @media (prefers-color-scheme: dark) {

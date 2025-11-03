@@ -175,7 +175,7 @@ export default function CircularFlow() {
           <g className="flow-arrow goods" onClick={() => setSelectedElement('goods')}>
             <defs>
               <marker id="arrowhead-goods" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                <polygon points="0 0, 10 3, 0 6" fill="#10b981" />
+                <polygon points="0 0, 10 3, 0 6" fill="#6EE7B7" />
               </marker>
             </defs>
             <path d="M 250 230 Q 400 180, 550 230"
@@ -189,7 +189,7 @@ export default function CircularFlow() {
           <g className="flow-arrow factors" onClick={() => setSelectedElement('factors')}>
             <defs>
               <marker id="arrowhead-factors" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                <polygon points="0 0, 10 3, 0 6" fill="#f59e0b" />
+                <polygon points="0 0, 10 3, 0 6" fill="#60A5FA" />
               </marker>
             </defs>
             <path d="M 550 290 Q 400 340, 250 290"
@@ -217,7 +217,7 @@ export default function CircularFlow() {
           <g className="flow-arrow income" onClick={() => setSelectedElement('income')}>
             <defs>
               <marker id="arrowhead-income" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                <polygon points="0 0, 10 3, 0 6" fill="#8b5cf6" />
+                <polygon points="0 0, 10 3, 0 6" fill="#A7F3D0" />
               </marker>
             </defs>
             <path d="M 550 310 Q 400 370, 250 310"

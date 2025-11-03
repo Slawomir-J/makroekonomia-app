@@ -221,14 +221,14 @@
 }
 
 .table-row.active {
-  background-color: #fef3c7;
-  border-color: #f59e0b;
+  background-color: var(--success-light);
+  border-color: var(--success-dark);
   font-weight: 600;
 }
 
 @media (prefers-color-scheme: dark) {
   .table-row.active {
-    background-color: #78350f;
+    background-color: #065f46;
   }
 }
 
@@ -290,26 +290,26 @@
 .explanation-box {
   margin-top: 2rem;
   padding: 1.5rem;
-  background-color: #fef3c7;
+  background-color: var(--primary-light);
   border-radius: 0.75rem;
-  border-left: 4px solid #f59e0b;
+  border-left: 4px solid var(--primary-dark);
 }
 
 @media (prefers-color-scheme: dark) {
   .explanation-box {
-    background-color: #78350f;
+    background-color: #1e3a8a;
   }
 }
 
 .explanation-box h4 {
   margin: 0 0 1rem 0;
-  color: #92400e;
+  color: var(--primary-text);
   font-size: 1.2rem;
 }
 
 @media (prefers-color-scheme: dark) {
   .explanation-box h4 {
-    color: #fef3c7;
+    color: var(--primary-light);
   }
 }
 

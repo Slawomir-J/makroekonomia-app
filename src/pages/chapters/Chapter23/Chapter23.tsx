@@ -1,14 +1,17 @@
 import { Coins, Building2, TrendingUp, RefreshCw, CreditCard, Wallet, Calculator, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import GlossaryPanel from '../../../components/GlossaryPanel/GlossaryPanel';
 import '../Chapter20/Chapter20.css';
 
 export default function Chapter23() {
   return (
     <div className="chapter">
-      <header className="chapter-header">
-        <span className="chapter-badge">Rozdział 23</span>
-        <h1>Pieniądz i system bankowy</h1>
-      </header>
+      <div className="chapter-with-glossary">
+        <div className="chapter-main-content">
+          <header className="chapter-header">
+            <span className="chapter-badge">Rozdział 23</span>
+            <h1>Pieniądz i system bankowy</h1>
+          </header>
 
       <section className="chapter-section">
         <h2><Coins className="section-icon" /> Czym jest pieniądz?</h2>
@@ -429,9 +432,13 @@ export default function Chapter23() {
         </div>
       </section>
 
-      <div className="chapter-nav">
-        <Link to="/chapter/22" className="btn-secondary">← Rozdział 22</Link>
-        <Link to="/chapter/23/quiz" className="btn-primary">Quiz: Sprawdź wiedzę →</Link>
+          <div className="chapter-nav">
+            <Link to="/chapter/22" className="btn-secondary">← Rozdział 22</Link>
+            <Link to="/chapter/23/quiz" className="btn-primary">Quiz: Sprawdź wiedzę →</Link>
+          </div>
+        </div>
+
+        <GlossaryPanel />
       </div>
     </div>
   );

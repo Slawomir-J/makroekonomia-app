@@ -1,14 +1,17 @@
 import { TrendingUp, DollarSign, Calculator, Users, ShoppingCart, Building, Globe, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import GlossaryPanel from '../../../components/GlossaryPanel/GlossaryPanel';
 import '../Chapter20/Chapter20.css';
 
 export default function Chapter21() {
   return (
     <div className="chapter">
-      <header className="chapter-header">
-        <span className="chapter-badge">Rozdział 21</span>
-        <h1>Determinanty dochodu narodowego w krótkim okresie</h1>
-      </header>
+      <div className="chapter-with-glossary">
+        <div className="chapter-main-content">
+          <header className="chapter-header">
+            <span className="chapter-badge">Rozdział 21</span>
+            <h1>Determinanty dochodu narodowego w krótkim okresie</h1>
+          </header>
 
       <section className="chapter-section">
         <h2><TrendingUp className="section-icon" /> Popyt globalny (Aggregate Demand - AD)</h2>
@@ -286,9 +289,13 @@ export default function Chapter21() {
         </div>
       </section>
 
-      <div className="chapter-nav">
-        <Link to="/chapter/20" className="btn-secondary">← Rozdział 20</Link>
-        <Link to="/chapter/21/quiz" className="btn-primary">Quiz: Sprawdź wiedzę →</Link>
+          <div className="chapter-nav">
+            <Link to="/chapter/20" className="btn-secondary">← Rozdział 20</Link>
+            <Link to="/chapter/21/quiz" className="btn-primary">Quiz: Sprawdź wiedzę →</Link>
+          </div>
+        </div>
+
+        <GlossaryPanel />
       </div>
     </div>
   );

@@ -9,13 +9,38 @@
   line-height: 1.6;
   font-weight: 400;
 
+  /* Paleta pastelowa - niebieski (główny) */
   --primary-color: #2563eb;
-  --secondary-color: #1e40af;
+  --primary-light: #DBEAFE;
+  --primary-medium: #BFDBFE;
+  --primary-dark: #93C5FD;
+  --primary-darker: #60A5FA;
+  --primary-text: #1E3A8A;
+
+  /* Paleta pastelowa - zielony (sukces/pozytywne) */
+  --success-lightest: #ECFDF5;
+  --success-light: #D1FAE5;
+  --success-medium: #A7F3D0;
+  --success-dark: #6EE7B7;
+  --success-text: #064E3B;
+  --success-color: #6EE7B7;
+
+  /* Paleta pastelowa - różowy (TYLKO błędy) */
+  --error-light: #FCE7F3;
+  --error-medium: #FBCFE8;
+  --error-text: #831843;
+  --error-color: #FBCFE8;
+
+  /* Neutralne */
   --bg-color: #ffffff;
+  --bg-gray-lightest: #F9FAFB;
+  --bg-gray-light: #F3F4F6;
+  --bg-gray-medium: #E5E7EB;
   --text-color: #1f2937;
   --border-color: #e5e7eb;
-  --success-color: #10b981;
-  --error-color: #ef4444;
+
+  /* Deprecated - do usunięcia w przyszłości */
+  --secondary-color: #1e40af;
   --warning-color: #f59e0b;
 }
 

@@ -263,27 +263,27 @@
 
 .calculation-details {
   padding: 2rem;
-  background-color: #fef3c7;
+  background-color: var(--primary-light);
   border-radius: 0.75rem;
-  border-left: 4px solid #f59e0b;
+  border-left: 4px solid var(--primary-dark);
   margin: 1rem 0 2rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
   .calculation-details {
-    background-color: #78350f;
+    background-color: #1e3a8a;
   }
 }
 
 .calculation-details h4 {
   margin: 0 0 1.5rem 0;
-  color: #92400e;
+  color: var(--primary-text);
   font-size: 1.2rem;
 }
 
 @media (prefers-color-scheme: dark) {
   .calculation-details h4 {
-    color: #fef3c7;
+    color: var(--primary-light);
   }
 }
 
@@ -321,12 +321,13 @@
 }
 
 .calc-step .success {
-  color: var(--success-color);
+  color: var(--success-text);
   font-weight: 700;
   padding: 0.5rem;
-  background-color: #d1fae5;
+  background-color: var(--success-light);
   border-radius: 0.375rem;
   margin-top: 0.5rem !important;
+  border: 2px solid var(--success-medium);
 }
 
 @media (prefers-color-scheme: dark) {

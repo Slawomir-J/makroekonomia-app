@@ -46,15 +46,15 @@
 .calculation-task {
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background-color: #fef3c7;
-  border-left: 4px solid #f59e0b;
+  background-color: var(--bg-gray-light);
+  border-left: 4px solid var(--primary-dark);
   border-radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   .calculation-task {
-    background-color: #78350f;
-    border-left-color: #fbbf24;
+    background-color: #374151;
+    border-left-color: var(--primary-dark);
   }
 }
 
