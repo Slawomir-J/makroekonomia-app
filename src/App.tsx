@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
+import Summary from './pages/Summary/Summary';
 import Chapter20 from './pages/chapters/Chapter20/Chapter20';
 import Chapter20Quiz from './pages/chapters/Chapter20/Chapter20Quiz';
 import Chapter20Calculator from './pages/chapters/Chapter20/Chapter20Calculator';
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="summary" element={<Summary />} />
           <Route path="exam-mode" element={<ExamMode />} />
           <Route path="tools" element={<Tools />} />
           <Route path="chapter/20" element={<Chapter20 />} />

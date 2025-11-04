@@ -154,6 +154,13 @@ export default function Navigation() {
             );
           })}
         </div>
+
+        <div className="summary-link-container">
+          <Link to="/summary" className="summary-link">
+            <span className="summary-icon">📚</span>
+            <span className="summary-text">Podsumowanie rozdziałów</span>
+          </Link>
+        </div>
       </div>
     </nav>
   );
