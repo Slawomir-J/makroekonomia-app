@@ -21,6 +21,9 @@ export default function FlowDiagram() {
           <span className="op-tag minus">− podatki pośrednie</span>
           <span className="op-tag plus">+ dotacje</span>
         </div>
+        <div className="formula-box">
+          <strong>Wzór:</strong> PKB (c. czynn.) = PKB (c. rynk.) − Tp + S
+        </div>
       </div>
 
       <div className="simple-card">
@@ -37,6 +40,9 @@ export default function FlowDiagram() {
           <span className="op-tag plus">+ dochody z pracy i własności Polaków za granicą</span>
           <span className="op-tag minus">− dochody z pracy i własności cudzoziemców w PL</span>
         </div>
+        <div className="formula-box">
+          <strong>Wzór:</strong> PNB = PKB (c. czynn.) + DZ_kraj − DZ_zagranica
+        </div>
       </div>
 
       <div className="simple-card">
@@ -51,6 +57,9 @@ export default function FlowDiagram() {
         <div className="arrow-icon">↓</div>
         <div className="operation-tags">
           <span className="op-tag minus">− amortyzacja</span>
+        </div>
+        <div className="formula-box">
+          <strong>Wzór:</strong> DN = PNB − A
         </div>
       </div>
 

@@ -122,6 +122,86 @@
   color: #2f855a;
 }
 
+/* Formula box */
+.formula-box {
+  width: 100%;
+  background: white;
+  border: 2px solid #4299e1;
+  border-radius: 8px;
+  padding: 0.875rem 1.25rem;
+  margin-top: 0.75rem;
+  font-family: 'Courier New', Consolas, monospace;
+  font-size: 1rem;
+  color: #2c5282;
+  text-align: center;
+}
+
+.formula-box strong {
+  color: #2d3748;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .flow-header {
+    background: #1f2937;
+    border-color: #60a5fa;
+  }
+
+  .flow-header h2 {
+    color: #f3f4f6;
+  }
+
+  .simple-card {
+    background: #1f2937;
+    border-color: #4b5563;
+  }
+
+  .simple-card.highlight {
+    background: linear-gradient(135deg, #064e3b 0%, #1f2937 100%);
+    border-color: #10b981;
+  }
+
+  .card-content h3 {
+    color: #f3f4f6;
+  }
+
+  .card-content p {
+    color: #d1d5db;
+  }
+
+  .arrow-box {
+    background: #111827;
+    border-color: #4b5563;
+  }
+
+  .arrow-icon {
+    color: #60a5fa;
+  }
+
+  .op-tag.minus {
+    background: #7f1d1d;
+    border-color: #f87171;
+    color: #fca5a5;
+  }
+
+  .op-tag.plus {
+    background: #064e3b;
+    border-color: #34d399;
+    color: #6ee7b7;
+  }
+
+  .formula-box {
+    background: #374151;
+    border-color: #60a5fa;
+    color: #93c5fd;
+  }
+
+  .formula-box strong {
+    color: #f3f4f6;
+  }
+}
+
 @media (max-width: 768px) {
   .flow-simple {
     padding: 1.5rem 1rem;

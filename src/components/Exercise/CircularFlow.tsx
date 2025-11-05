@@ -133,159 +133,188 @@ export default function CircularFlow() {
       </div>
 
       <div className="flow-diagram-container">
-        <svg viewBox="0 0 800 600" className="flow-diagram">
+        <svg viewBox="0 0 1000 700" className="flow-diagram">
           {/* Gospodarstwa domowe */}
           <g className="flow-element households" onClick={() => setSelectedElement('households')}>
-            <rect x="50" y="200" width="200" height="120" rx="10"
+            <rect x="40" y="270" width="220" height="130" rx="12"
                   className={`element-box ${selectedElement === 'households' ? 'selected' : ''}`} />
-            <text x="150" y="250" className="element-label">Gospodarstwa</text>
-            <text x="150" y="275" className="element-label">domowe</text>
-            <text x="150" y="300" className="element-sublabel">Dochód: {disposableIncome}</text>
+            <text x="150" y="320" className="element-label">Gospodarstwa</text>
+            <text x="150" y="350" className="element-label">domowe</text>
+            <text x="150" y="380" className="element-sublabel">Dochód: {disposableIncome}</text>
           </g>
 
           {/* Przedsiębiorstwa */}
           <g className="flow-element firms" onClick={() => setSelectedElement('firms')}>
-            <rect x="550" y="200" width="200" height="120" rx="10"
+            <rect x="740" y="270" width="220" height="130" rx="12"
                   className={`element-box ${selectedElement === 'firms' ? 'selected' : ''}`} />
-            <text x="650" y="250" className="element-label">Przedsiębiorstwa</text>
-            <text x="650" y="280" className="element-sublabel">Przychody: {totalGDP}</text>
+            <text x="850" y="320" className="element-label">Przedsiębiorstwa</text>
+            <text x="850" y="355" className="element-sublabel">Przychody: {totalGDP}</text>
           </g>
 
           {/* Państwo (opcjonalne) */}
           {showGovernment && (
             <g className="flow-element government" onClick={() => setSelectedElement('government')}>
-              <rect x="325" y="50" width="150" height="80" rx="10"
+              <rect x="425" y="20" width="150" height="90" rx="10"
                     className={`element-box ${selectedElement === 'government' ? 'selected' : ''}`} />
-              <text x="400" y="85" className="element-label">Państwo</text>
-              <text x="400" y="110" className="element-sublabel">G: {values.government}</text>
+              <text x="500" y="60" className="element-label">Państwo</text>
+              <text x="500" y="90" className="element-sublabel">G: {values.government}</text>
             </g>
           )}
 
           {/* Zagranica (opcjonalne) */}
           {showForeign && (
             <g className="flow-element foreign" onClick={() => setSelectedElement('foreign')}>
-              <rect x="325" y="470" width="150" height="80" rx="10"
+              <rect x="425" y="570" width="150" height="90" rx="10"
                     className={`element-box ${selectedElement === 'foreign' ? 'selected' : ''}`} />
-              <text x="400" y="505" className="element-label">Zagranica</text>
-              <text x="400" y="530" className="element-sublabel">X-M: {values.exports - values.imports}</text>
+              <text x="500" y="605" className="element-label">Zagranica</text>
+              <text x="500" y="635" className="element-sublabel">X-M: {values.exports - values.imports}</text>
             </g>
           )}
 
-          {/* Górny przepływ: dobra i usługi → */}
-          <g className="flow-arrow goods" onClick={() => setSelectedElement('goods')}>
-            <defs>
-              <marker id="arrowhead-goods" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                <polygon points="0 0, 10 3, 0 6" fill="#6EE7B7" />
-              </marker>
-            </defs>
-            <path d="M 250 230 Q 400 180, 550 230"
-                  className={`flow-path goods-flow ${isAnimating ? 'animated' : ''} ${selectedElement === 'goods' ? 'selected' : ''}`}
-                  markerEnd="url(#arrowhead-goods)" />
-            <text x="400" y="175" className="flow-label goods-label">Dobra i usługi</text>
-            <text x="400" y="195" className="flow-value">C: {values.consumption}</text>
-          </g>
-
-          {/* Dolny przepływ: czynniki produkcji ← */}
-          <g className="flow-arrow factors" onClick={() => setSelectedElement('factors')}>
-            <defs>
-              <marker id="arrowhead-factors" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                <polygon points="0 0, 10 3, 0 6" fill="#60A5FA" />
-              </marker>
-            </defs>
-            <path d="M 550 290 Q 400 340, 250 290"
-                  className={`flow-path factors-flow ${isAnimating ? 'animated' : ''} ${selectedElement === 'factors' ? 'selected' : ''}`}
-                  markerEnd="url(#arrowhead-factors)" />
-            <text x="400" y="350" className="flow-label factors-label">Czynniki produkcji</text>
-            <text x="400" y="370" className="flow-value">(praca, kapitał, ziemia)</text>
-          </g>
-
-          {/* Górny okrąg: wydatki → */}
+          {/* Górny przepływ zewnętrzny: wydatki → */}
           <g className="flow-arrow spending" onClick={() => setSelectedElement('spending')}>
             <defs>
               <marker id="arrowhead-spending" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
                 <polygon points="0 0, 10 3, 0 6" fill="#2563eb" />
               </marker>
             </defs>
-            <path d="M 250 210 Q 400 150, 550 210"
+            <path d="M 260 280 Q 500 165, 740 280"
                   className={`flow-path spending-flow ${isAnimating ? 'animated' : ''} ${selectedElement === 'spending' ? 'selected' : ''}`}
                   markerEnd="url(#arrowhead-spending)"
-                  strokeDasharray="5,5" />
-            <text x="400" y="140" className="flow-label spending-label">Wydatki ($)</text>
+                  strokeDasharray="8,6" />
+            <text x="500" y="150" className="flow-label spending-label with-shadow">Wydatki ($)</text>
           </g>
 
-          {/* Dolny okrąg: dochody ← */}
+          {/* Górny przepływ wewnętrzny: dobra i usługi → */}
+          <g className="flow-arrow goods" onClick={() => setSelectedElement('goods')}>
+            <defs>
+              <marker id="arrowhead-goods" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#6EE7B7" />
+              </marker>
+            </defs>
+            <path d="M 740 290 Q 500 215, 260 290"
+                  className={`flow-path goods-flow ${isAnimating ? 'animated' : ''} ${selectedElement === 'goods' ? 'selected' : ''}`}
+                  markerEnd="url(#arrowhead-goods)" />
+            <text x="500" y="205" className="flow-label goods-label with-shadow">Dobra i usługi</text>
+            <text x="500" y="222" className="flow-value with-shadow">C: {values.consumption}</text>
+          </g>
+
+          {/* Dolny przepływ wewnętrzny: czynniki produkcji ← */}
+          <g className="flow-arrow factors" onClick={() => setSelectedElement('factors')}>
+            <defs>
+              <marker id="arrowhead-factors" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#60A5FA" />
+              </marker>
+            </defs>
+            <path d="M 260 380 Q 500 455, 740 380"
+                  className={`flow-path factors-flow ${isAnimating ? 'animated' : ''} ${selectedElement === 'factors' ? 'selected' : ''}`}
+                  markerEnd="url(#arrowhead-factors)" />
+            <text x="500" y="470" className="flow-label factors-label with-shadow">Czynniki produkcji</text>
+            <text x="500" y="487" className="flow-value with-shadow">(praca, kapitał, ziemia)</text>
+          </g>
+
+          {/* Dolny przepływ zewnętrzny: dochody ← */}
           <g className="flow-arrow income" onClick={() => setSelectedElement('income')}>
             <defs>
               <marker id="arrowhead-income" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
                 <polygon points="0 0, 10 3, 0 6" fill="#A7F3D0" />
               </marker>
             </defs>
-            <path d="M 550 310 Q 400 370, 250 310"
+            <path d="M 260 395 Q 500 520, 740 395"
                   className={`flow-path income-flow ${isAnimating ? 'animated' : ''} ${selectedElement === 'income' ? 'selected' : ''}`}
                   markerEnd="url(#arrowhead-income)"
-                  strokeDasharray="5,5" />
-            <text x="400" y="395" className="flow-label income-label">Dochody ($)</text>
-            <text x="400" y="415" className="flow-value">W + Π: {totalIncome}</text>
+                  strokeDasharray="8,6" />
+            <text x="500" y="540" className="flow-label income-label with-shadow">Dochody ($)</text>
+            <text x="500" y="557" className="flow-value with-shadow">W + Π: {totalIncome}</text>
           </g>
 
           {/* Przepływy z państwem */}
           {showGovernment && (
             <>
-              {/* Podatki */}
-              <line x1="150" y1="200" x2="360" y2="130"
-                    className="flow-path-simple tax-flow"
-                    markerEnd="url(#arrow-tax)" />
-              <text x="230" y="160" className="flow-label-small">Podatki: {values.taxes}</text>
+              {/* Podatki - od gospodarstw do państwa (LEWA STRONA) */}
+              <g className="flow-arrow tax" onClick={() => setSelectedElement('government')}>
+                <defs>
+                  <marker id="arrow-tax" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#ef4444" />
+                  </marker>
+                </defs>
+                <path d="M 180 270 Q 280 150, 440 110"
+                      className="flow-path-curved tax-flow"
+                      markerEnd="url(#arrow-tax)" />
+                {/* Kompaktowa karta z tłem - bliżej państwa */}
+                <rect x="225" y="125" width="100" height="22" rx="3" fill="rgba(255, 255, 255, 0.98)"
+                      stroke="#ef4444" strokeWidth="2" className="label-bg" />
+                <text x="275" y="140" className="flow-label-small tax-label">T: {values.taxes}</text>
+              </g>
 
-              {/* Transfery */}
-              <line x1="380" y1="130" x2="200" y2="200"
-                    className="flow-path-simple transfer-flow"
-                    markerEnd="url(#arrow-transfer)" />
-              <text x="260" y="150" className="flow-label-small">Transfery: {values.transfers}</text>
+              {/* Transfery - od państwa do gospodarstw (LEWA STRONA) */}
+              <g className="flow-arrow transfer" onClick={() => setSelectedElement('government')}>
+                <defs>
+                  <marker id="arrow-transfer" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#10b981" />
+                  </marker>
+                </defs>
+                <path d="M 540 110 Q 360 160, 210 270"
+                      className="flow-path-curved transfer-flow"
+                      markerEnd="url(#arrow-transfer)" />
+                {/* Kompaktowa karta z tłem - bardziej na lewo */}
+                <rect x="305" y="120" width="110" height="22" rx="3" fill="rgba(255, 255, 255, 0.98)"
+                      stroke="#10b981" strokeWidth="2" className="label-bg" />
+                <text x="360" y="135" className="flow-label-small transfer-label">TR: {values.transfers}</text>
+              </g>
 
-              {/* Wydatki rządowe */}
-              <line x1="440" y1="130" x2="600" y2="200"
-                    className="flow-path-simple gov-spending-flow"
-                    markerEnd="url(#arrow-gov)" />
-              <text x="490" y="160" className="flow-label-small">G: {values.government}</text>
-
-              <defs>
-                <marker id="arrow-tax" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-                  <polygon points="0 0, 8 3, 0 6" fill="#ef4444" />
-                </marker>
-                <marker id="arrow-transfer" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-                  <polygon points="0 0, 8 3, 0 6" fill="#10b981" />
-                </marker>
-                <marker id="arrow-gov" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-                  <polygon points="0 0, 8 3, 0 6" fill="#3b82f6" />
-                </marker>
-              </defs>
+              {/* Wydatki rządowe - od państwa do przedsiębiorstw (PRAWA STRONA) */}
+              <g className="flow-arrow gov-spending" onClick={() => setSelectedElement('government')}>
+                <defs>
+                  <marker id="arrow-gov" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#3b82f6" />
+                  </marker>
+                </defs>
+                <path d="M 560 110 Q 720 150, 820 270"
+                      className="flow-path-curved gov-spending-flow"
+                      markerEnd="url(#arrow-gov)" />
+                {/* Kompaktowa karta z tłem - bliżej państwa */}
+                <rect x="675" y="125" width="90" height="22" rx="3" fill="rgba(255, 255, 255, 0.98)"
+                      stroke="#3b82f6" strokeWidth="2" className="label-bg" />
+                <text x="720" y="140" className="flow-label-small gov-label">G: {values.government}</text>
+              </g>
             </>
           )}
 
           {/* Przepływy z zagranicą */}
           {showForeign && (
             <>
-              {/* Eksport */}
-              <line x1="650" y1="320" x2="440" y2="470"
-                    className="flow-path-simple export-flow"
-                    markerEnd="url(#arrow-export)" />
-              <text x="520" y="410" className="flow-label-small">X: {values.exports}</text>
+              {/* Import - od zagranicy do gospodarstw (LEWA STRONA DÓŁ) */}
+              <g className="flow-arrow import" onClick={() => setSelectedElement('foreign')}>
+                <defs>
+                  <marker id="arrow-import" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#ef4444" />
+                  </marker>
+                </defs>
+                <path d="M 455 570 Q 280 510, 180 400"
+                      className="flow-path-curved import-flow"
+                      markerEnd="url(#arrow-import)" />
+                {/* Kompaktowa karta z tłem - bliżej zagranicy */}
+                <rect x="225" y="563" width="90" height="22" rx="3" fill="rgba(255, 255, 255, 0.98)"
+                      stroke="#ef4444" strokeWidth="2" className="label-bg" />
+                <text x="270" y="578" className="flow-label-small import-label">M: {values.imports}</text>
+              </g>
 
-              {/* Import */}
-              <line x1="360" y1="470" x2="200" y2="320"
-                    className="flow-path-simple import-flow"
-                    markerEnd="url(#arrow-import)" />
-              <text x="250" y="410" className="flow-label-small">M: {values.imports}</text>
-
-              <defs>
-                <marker id="arrow-export" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-                  <polygon points="0 0, 8 3, 0 6" fill="#10b981" />
-                </marker>
-                <marker id="arrow-import" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-                  <polygon points="0 0, 8 3, 0 6" fill="#ef4444" />
-                </marker>
-              </defs>
+              {/* Eksport - od przedsiębiorstw do zagranicy (PRAWA STRONA DÓŁ) */}
+              <g className="flow-arrow export" onClick={() => setSelectedElement('foreign')}>
+                <defs>
+                  <marker id="arrow-export" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                    <polygon points="0 0, 10 3, 0 6" fill="#10b981" />
+                  </marker>
+                </defs>
+                <path d="M 820 400 Q 720 510, 545 570"
+                      className="flow-path-curved export-flow"
+                      markerEnd="url(#arrow-export)" />
+                {/* Kompaktowa karta z tłem - bliżej zagranicy */}
+                <rect x="685" y="563" width="90" height="22" rx="3" fill="rgba(255, 255, 255, 0.98)"
+                      stroke="#10b981" strokeWidth="2" className="label-bg" />
+                <text x="730" y="578" className="flow-label-small export-label">X: {values.exports}</text>
+              </g>
             </>
           )}
         </svg>

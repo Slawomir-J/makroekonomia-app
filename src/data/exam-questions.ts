@@ -297,37 +297,63 @@ export function getRandomExamQuestions(
 export function analyzeWeakAreas(answeredQuestions: { questionId: string; correct: boolean }[]): string[] {
   const weakAreas: Set<string> = new Set();
 
+  // Mapa ID pytań na tematy/rozdziały
+  const topicMap: Record<string, string> = {
+    // Rozdział 20: Wprowadzenie do makroekonomii
+    'exam-t1': 'Rozdział 20: Wprowadzenie do makroekonomii',
+    'exam-t2': 'Rozdział 20: Wprowadzenie do makroekonomii',
+    'exam-t3': 'Rozdział 20: Wprowadzenie do makroekonomii',
+    'exam-t4': 'Rozdział 20: Wprowadzenie do makroekonomii',
+    'exam-t5': 'Rozdział 20: Wprowadzenie do makroekonomii',
+
+    // Rozdział 21: Determinanty dochodu narodowego
+    'exam-t6': 'Rozdział 21: Determinanty dochodu narodowego',
+    'exam-t7': 'Rozdział 21: Determinanty dochodu narodowego',
+    'exam-t8': 'Rozdział 21: Determinanty dochodu narodowego',
+    'exam-t9': 'Rozdział 21: Determinanty dochodu narodowego',
+    'exam-t10': 'Rozdział 21: Determinanty dochodu narodowego',
+
+    // Rozdział 22: Polityka fiskalna
+    'exam-t11': 'Rozdział 22: Polityka fiskalna',
+    'exam-t12': 'Rozdział 22: Polityka fiskalna',
+    'exam-t13': 'Rozdział 22: Polityka fiskalna',
+
+    // Rozdziały 23-24: Pieniądz i polityka monetarna
+    'exam-t14': 'Rozdziały 23-24: Pieniądz i polityka monetarna',
+    'exam-t15': 'Rozdziały 23-24: Pieniądz i polityka monetarna',
+    'exam-t16': 'Rozdziały 23-24: Pieniądz i polityka monetarna',
+    'exam-t17': 'Rozdziały 23-24: Pieniądz i polityka monetarna',
+    'exam-t18': 'Rozdziały 23-24: Pieniądz i polityka monetarna',
+
+    // Obliczenia: PKB i wartość dodana
+    'calc-1': 'Obliczenia: PKB i wartość dodana',
+    'calc-2': 'Obliczenia: PKB i wartość dodana',
+    'calc-3': 'Obliczenia: PKB i wartość dodana',
+
+    // Obliczenia: Funkcja konsumpcji i oszczędności
+    'calc-4': 'Obliczenia: Funkcja konsumpcji i oszczędności',
+    'calc-5': 'Obliczenia: Funkcja konsumpcji i oszczędności',
+    'calc-6': 'Obliczenia: Funkcja konsumpcji i oszczędności',
+
+    // Obliczenia: Mnożnik keynesowski
+    'calc-7': 'Obliczenia: Mnożnik keynesowski',
+    'calc-8': 'Obliczenia: Mnożnik keynesowski',
+
+    // Obliczenia: Równowaga i polityka fiskalna
+    'calc-9': 'Obliczenia: Równowaga i polityka fiskalna',
+    'calc-10': 'Obliczenia: Równowaga i polityka fiskalna',
+    'calc-11': 'Obliczenia: Równowaga i polityka fiskalna',
+
+    // Obliczenia: Kreacja pieniądza
+    'calc-12': 'Obliczenia: Kreacja pieniądza',
+    'calc-13': 'Obliczenia: Kreacja pieniądza'
+  };
+
   answeredQuestions.forEach(({ questionId, correct }) => {
     if (!correct) {
-      // Mapuj ID pytania na rozdział
-      if (questionId.startsWith('exam-t1') || questionId.startsWith('exam-t2') ||
-          questionId.startsWith('exam-t3') || questionId.startsWith('exam-t4') ||
-          questionId.startsWith('exam-t5')) {
-        weakAreas.add('Rozdział 20: Wprowadzenie do makroekonomii');
-      } else if (questionId.startsWith('exam-t6') || questionId.startsWith('exam-t7') ||
-                 questionId.startsWith('exam-t8') || questionId.startsWith('exam-t9') ||
-                 questionId.startsWith('exam-t10')) {
-        weakAreas.add('Rozdział 21: Determinanty dochodu narodowego');
-      } else if (questionId.startsWith('exam-t11') || questionId.startsWith('exam-t12') ||
-                 questionId.startsWith('exam-t13')) {
-        weakAreas.add('Rozdział 22: Polityka fiskalna');
-      } else if (questionId.startsWith('exam-t14') || questionId.startsWith('exam-t15') ||
-                 questionId.startsWith('exam-t16') || questionId.startsWith('exam-t17') ||
-                 questionId.startsWith('exam-t18')) {
-        weakAreas.add('Rozdziały 23-24: Pieniądz i polityka monetarna');
-      } else if (questionId.startsWith('calc-1') || questionId.startsWith('calc-2') ||
-                 questionId.startsWith('calc-3')) {
-        weakAreas.add('Obliczenia: PKB i wartość dodana');
-      } else if (questionId.startsWith('calc-4') || questionId.startsWith('calc-5') ||
-                 questionId.startsWith('calc-6')) {
-        weakAreas.add('Obliczenia: Funkcja konsumpcji i oszczędności');
-      } else if (questionId.startsWith('calc-7') || questionId.startsWith('calc-8')) {
-        weakAreas.add('Obliczenia: Mnożnik keynesowski');
-      } else if (questionId.startsWith('calc-9') || questionId.startsWith('calc-10') ||
-                 questionId.startsWith('calc-11')) {
-        weakAreas.add('Obliczenia: Równowaga i polityka fiskalna');
-      } else if (questionId.startsWith('calc-12') || questionId.startsWith('calc-13')) {
-        weakAreas.add('Obliczenia: Kreacja pieniądza');
+      const topic = topicMap[questionId];
+      if (topic) {
+        weakAreas.add(topic);
       }
     }
   });

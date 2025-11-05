@@ -265,7 +265,7 @@
 }
 
 /* Sekcja wyjaśnienia */
-.explanation {
+.exam-mode-container .explanation {
   margin-top: 1.5rem;
   padding: 1.25rem;
   border-radius: 0.75rem;
@@ -273,50 +273,61 @@
   border: 2px solid #A7F3D0;
 }
 
-.explanation.incorrect {
+.exam-mode-container .explanation.incorrect {
   background-color: #FCE7F3;
   border-color: #FBCFE8;
 }
 
-@media (prefers-color-scheme: dark) {
-  .explanation {
-    background-color: #D1FAE5;
-    border-color: #6EE7B7;
-  }
-
-  .explanation.incorrect {
-    background-color: #FCE7F3;
-    border-color: #F9A8D4;
-  }
-}
-
-.explanation-header {
+.exam-mode-container .explanation-header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.75rem;
   font-size: 1rem;
   color: #047857;
+  font-weight: 600;
 }
 
-.explanation.incorrect .explanation-header {
+.exam-mode-container .explanation.incorrect .explanation-header {
+  color: #BE123C;
+}
+
+.exam-mode-container .explanation p {
+  margin: 0;
+  line-height: 1.6;
+  color: #047857;
+}
+
+.exam-mode-container .explanation.incorrect p {
   color: #BE123C;
 }
 
 @media (prefers-color-scheme: dark) {
-  .explanation-header {
-    color: #064E3B;
+  .exam-mode-container .explanation {
+    background-color: #064e3b;
+    border-color: #10b981;
   }
 
-  .explanation.incorrect .explanation-header {
-    color: #831843;
+  .exam-mode-container .explanation.incorrect {
+    background-color: #7f1d1d;
+    border-color: #f87171;
   }
-}
 
-.explanation p {
-  margin: 0;
-  line-height: 1.6;
-  color: var(--text-color);
+  .exam-mode-container .explanation-header {
+    color: #6ee7b7;
+  }
+
+  .exam-mode-container .explanation.incorrect .explanation-header {
+    color: #fca5a5;
+  }
+
+  .exam-mode-container .explanation p {
+    color: #d1fae5;
+  }
+
+  .exam-mode-container .explanation.incorrect p {
+    color: #fecaca;
+  }
 }
 
 /* Przyciski akcji */
