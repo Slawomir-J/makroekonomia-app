@@ -16,7 +16,7 @@
 
 .home-subtitle {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 /* Exam Mode CTA */
@@ -96,7 +96,7 @@
 
 .feature-card {
   padding: 1.5rem;
-  background-color: #f9fafb;
+  background-color: var(--card-bg);
   border-radius: 0.75rem;
   border: 1px solid var(--border-color);
   text-align: center;
@@ -108,11 +108,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .feature-card {
-    background-color: #1f2937;
-  }
-}
 
 .feature-icon {
   font-size: 2.5rem;
@@ -126,7 +121,7 @@
 
 .feature-card p {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #9ca3af;
   line-height: 1.5;
 }
 
@@ -151,7 +146,7 @@
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border: 2px solid var(--border-color);
   border-radius: 0.75rem;
   text-decoration: none;
@@ -166,11 +161,6 @@
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .chapter-card {
-    background-color: #1f2937;
-  }
-}
 
 .chapter-number {
   display: flex;
@@ -193,7 +183,7 @@
 
 .chapter-card p {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin: 0;
 }
 

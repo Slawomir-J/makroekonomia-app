@@ -2,16 +2,11 @@
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .value-added-calculator {
-    background-color: #1f2937;
-  }
-}
 
 .calculator-header {
   display: flex;
@@ -35,7 +30,7 @@
 
 .calculator-description {
   margin: 0;
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 0.95rem;
 }
 
@@ -48,11 +43,6 @@
   font-size: 0.95rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .formula-reminder {
-    background-color: #78350f;
-  }
-}
 
 .companies-list {
   display: flex;
@@ -62,18 +52,13 @@
 }
 
 .company-card {
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border: 2px solid var(--border-color);
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: all 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .company-card {
-    background-color: #374151;
-  }
-}
 
 .company-card:hover {
   border-color: var(--primary-color);
@@ -107,15 +92,10 @@
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  background-color: white;
+  background-color: var(--card-bg);
   color: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .company-name-input {
-    background-color: #1f2937;
-  }
-}
 
 .company-name-input:focus {
   outline: none;
@@ -137,11 +117,6 @@
   background-color: #fee2e2;
 }
 
-@media (prefers-color-scheme: dark) {
-  .remove-btn:hover {
-    background-color: #7f1d1d;
-  }
-}
 
 .company-inputs {
   display: grid;
@@ -167,27 +142,17 @@
   color: #4b5563;
 }
 
-@media (prefers-color-scheme: dark) {
-  .input-group label {
-    color: #9ca3af;
-  }
-}
 
 .input-group input[type="number"] {
   padding: 0.75rem;
   border: 2px solid var(--border-color);
   border-radius: 0.5rem;
   font-size: 1rem;
-  background-color: white;
+  background-color: var(--card-bg);
   color: var(--text-color);
   transition: border-color 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .input-group input[type="number"] {
-    background-color: #1f2937;
-  }
-}
 
 .input-group input[type="number"]:focus {
   outline: none;
@@ -207,11 +172,6 @@
   color: #4b5563;
 }
 
-@media (prefers-color-scheme: dark) {
-  .value-added-result label {
-    color: #9ca3af;
-  }
-}
 
 .result-value {
   padding: 0.75rem;
@@ -228,11 +188,6 @@
   color: var(--success-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .result-value.positive {
-    background-color: #064e3b;
-  }
-}
 
 .result-value.negative {
   background-color: #fee2e2;
@@ -240,11 +195,6 @@
   color: var(--error-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .result-value.negative {
-    background-color: #7f1d1d;
-  }
-}
 
 .warning-message {
   margin-top: 1rem;
@@ -256,12 +206,6 @@
   color: #92400e;
 }
 
-@media (prefers-color-scheme: dark) {
-  .warning-message {
-    background-color: #78350f;
-    color: #fef3c7;
-  }
-}
 
 .add-company-btn {
   display: flex;
@@ -270,7 +214,7 @@
   gap: 0.5rem;
   width: 100%;
   padding: 0.875rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border: 2px dashed var(--border-color);
   border-radius: 0.75rem;
   color: var(--primary-color);
@@ -279,22 +223,12 @@
   transition: all 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .add-company-btn {
-    background-color: #374151;
-  }
-}
 
 .add-company-btn:hover {
   border-color: var(--primary-color);
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
 }
 
-@media (prefers-color-scheme: dark) {
-  .add-company-btn:hover {
-    background-color: #1e3a8a;
-  }
-}
 
 .summary-section {
   margin-top: 2rem;
@@ -320,15 +254,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.25rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .summary-item {
-    background-color: #374151;
-  }
-}
 
 .summary-item.highlight {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -353,17 +282,12 @@
 }
 
 .explanation-box {
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
   padding: 1.5rem;
   border-radius: 0.75rem;
   border-left: 4px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .explanation-box {
-    background-color: #1e3a8a;
-  }
-}
 
 .explanation-box h5 {
   margin: 0 0 1rem 0;
@@ -377,7 +301,7 @@
 }
 
 .formula-final {
-  background-color: white;
+  background-color: var(--card-bg);
   padding: 1rem;
   border-radius: 0.5rem;
   font-family: 'Courier New', monospace;
@@ -386,11 +310,6 @@
   margin-top: 1rem !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  .formula-final {
-    background-color: #1f2937;
-  }
-}
 
 @media (max-width: 768px) {
   .value-added-calculator {

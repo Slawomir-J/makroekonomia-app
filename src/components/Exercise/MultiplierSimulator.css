@@ -2,16 +2,11 @@
   max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .multiplier-simulator {
-    background-color: #1f2937;
-  }
-}
 
 .simulator-controls {
   display: flex;
@@ -19,16 +14,11 @@
   gap: 1.5rem;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .simulator-controls {
-    background-color: #111827;
-  }
-}
 
 .control-group {
   display: flex;
@@ -50,15 +40,10 @@
   border-radius: 0.5rem;
   font-size: 1.1rem;
   max-width: 200px;
-  background-color: white;
+  background-color: var(--card-bg);
   color: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .control-group input[type="number"] {
-    background-color: #374151;
-  }
-}
 
 .control-group input[type="number"]:focus {
   outline: none;
@@ -95,7 +80,7 @@
 
 .unit {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-left: 0.5rem;
 }
 
@@ -108,7 +93,7 @@
 
 .help-text {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-top: 0.25rem;
 }
 
@@ -127,16 +112,11 @@
 
 .result-card {
   padding: 1.5rem;
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
   border-radius: 0.75rem;
   border-left: 4px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .result-card {
-    background-color: #1e3a8a;
-  }
-}
 
 .result-card h4 {
   margin: 0 0 1rem 0;
@@ -156,23 +136,18 @@
 
 .result-formula {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #9ca3af;
   font-family: 'Courier New', monospace;
 }
 
 .rounds-visualization {
   margin: 2rem 0;
   padding: 1.5rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .rounds-visualization {
-    background-color: #111827;
-  }
-}
 
 .rounds-visualization h3 {
   margin: 0 0 0.5rem 0;
@@ -180,7 +155,7 @@
 }
 
 .rounds-visualization .description {
-  color: #6b7280;
+  color: #9ca3af;
   margin-bottom: 1.5rem;
 }
 
@@ -208,17 +183,12 @@
 }
 
 .table-row {
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   border: 1px solid var(--border-color);
   animation: fadeIn 0.5s ease-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  .table-row {
-    background-color: #1f2937;
-  }
-}
 
 .table-row.active {
   background-color: var(--success-light);
@@ -226,11 +196,6 @@
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .table-row.active {
-    background-color: #065f46;
-  }
-}
 
 @keyframes fadeIn {
   from {
@@ -276,11 +241,6 @@
   border-left: 4px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .convergence-info {
-    background-color: #1e3a8a;
-  }
-}
 
 .convergence-info p {
   margin: 0.5rem 0;
@@ -295,11 +255,6 @@
   border-left: 4px solid var(--primary-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  .explanation-box {
-    background-color: #1e3a8a;
-  }
-}
 
 .explanation-box h4 {
   margin: 0 0 1rem 0;
@@ -307,11 +262,6 @@
   font-size: 1.2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .explanation-box h4 {
-    color: var(--primary-light);
-  }
-}
 
 .explanation-box ul {
   margin: 0;

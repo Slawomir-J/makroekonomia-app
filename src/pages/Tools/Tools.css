@@ -25,19 +25,14 @@
 
 .tools-subtitle {
   font-size: 1.2rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tools-subtitle {
-    color: #9ca3af;
-  }
-}
 
 /* Tool sections */
 .tool-section {
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -45,11 +40,6 @@
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .tool-section {
-    background-color: #1f2937;
-  }
-}
 
 .tool-section-header {
   display: flex;
@@ -74,16 +64,11 @@
 
 .tool-section-header p {
   font-size: 1rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin: 0;
   line-height: 1.5;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tool-section-header p {
-    color: #9ca3af;
-  }
-}
 
 .tool-content {
   padding: 0;

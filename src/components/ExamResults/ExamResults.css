@@ -5,18 +5,13 @@
 }
 
 .exam-results-card {
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1.5rem;
   padding: 3rem 2rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  .exam-results-card {
-    background-color: #1f2937;
-  }
-}
 
 .results-header h1 {
   margin: 0 0 2rem 0;
@@ -110,27 +105,6 @@
   color: #991b1b;
 }
 
-@media (prefers-color-scheme: dark) {
-  .result-message.excellent {
-    background-color: #064e3b;
-    color: #6ee7b7;
-  }
-
-  .result-message.good {
-    background-color: #1e3a8a;
-    color: #93c5fd;
-  }
-
-  .result-message.fair {
-    background-color: #78350f;
-    color: #fcd34d;
-  }
-
-  .result-message.poor {
-    background-color: #7f1d1d;
-    color: #fca5a5;
-  }
-}
 
 .message-icon {
   margin-bottom: 1rem;
@@ -165,7 +139,7 @@
 }
 
 .stat-item {
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   padding: 1.5rem;
   border-radius: 0.75rem;
   display: flex;
@@ -174,12 +148,6 @@
   border: 2px solid #e5e7eb;
 }
 
-@media (prefers-color-scheme: dark) {
-  .stat-item {
-    background-color: #374151;
-    border-color: #4b5563;
-  }
-}
 
 .stat-icon {
   width: 48px;
@@ -200,17 +168,12 @@
 
 .stat-label {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #9ca3af;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .stat-label {
-    color: #9ca3af;
-  }
-}
 
 .stat-value {
   font-size: 1.75rem;
@@ -229,12 +192,6 @@
   text-align: left;
 }
 
-@media (prefers-color-scheme: dark) {
-  .weak-areas-section {
-    background-color: #78350f;
-    border-left-color: #fbbf24;
-  }
-}
 
 .weak-areas-header {
   display: flex;
@@ -244,11 +201,6 @@
   color: #92400e;
 }
 
-@media (prefers-color-scheme: dark) {
-  .weak-areas-header {
-    color: #fcd34d;
-  }
-}
 
 .weak-areas-header h3 {
   margin: 0;
@@ -261,11 +213,6 @@
   font-weight: 500;
 }
 
-@media (prefers-color-scheme: dark) {
-  .weak-areas-intro {
-    color: #fde68a;
-  }
-}
 
 .weak-areas-list {
   list-style: none;
@@ -287,12 +234,6 @@
   color: #92400e;
 }
 
-@media (prefers-color-scheme: dark) {
-  .weak-areas-list li {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #fde68a;
-  }
-}
 
 /* Przyciski akcji */
 .results-actions {
@@ -337,19 +278,8 @@
   line-height: 1.6;
 }
 
-@media (prefers-color-scheme: dark) {
-  .study-tip {
-    background-color: #1e3a8a;
-    color: #c7d2fe;
-  }
-}
 
 .study-tip strong {
   color: #4338ca;
 }
 
-@media (prefers-color-scheme: dark) {
-  .study-tip strong {
-    color: #a5b4fc;
-  }
-}

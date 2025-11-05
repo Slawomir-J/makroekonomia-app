@@ -2,30 +2,20 @@
   max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .equilibrium-calculator {
-    background-color: #1f2937;
-  }
-}
 
 .calculator-intro {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
   border-radius: 0.75rem;
   border-left: 4px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .calculator-intro {
-    background-color: #1e3a8a;
-  }
-}
 
 .calculator-intro h3 {
   margin: 0 0 0.5rem 0;
@@ -46,16 +36,11 @@
 
 .input-section {
   padding: 1.5rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .input-section {
-    background-color: #111827;
-  }
-}
 
 .input-section h4 {
   margin: 0 0 1.5rem 0;
@@ -81,16 +66,11 @@
   border: 2px solid var(--border-color);
   border-radius: 0.5rem;
   font-size: 1rem;
-  background-color: white;
+  background-color: var(--card-bg);
   color: var(--text-color);
   max-width: 200px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .input-group input[type="number"] {
-    background-color: #374151;
-  }
-}
 
 .input-group input[type="number"]:focus {
   outline: none;
@@ -126,7 +106,7 @@
 
 .unit {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-left: 0.5rem;
   font-weight: 400;
 }
@@ -144,7 +124,7 @@
 
 .hint {
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-top: 0.25rem;
   font-weight: 400;
 }
@@ -152,16 +132,11 @@
 .formula-display {
   margin-top: 1.5rem;
   padding: 1rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   border: 2px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .formula-display {
-    background-color: #1f2937;
-  }
-}
 
 .formula-display strong {
   color: var(--primary-color);
@@ -185,28 +160,18 @@
 
 .result-card {
   padding: 1.5rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .result-card {
-    background-color: #111827;
-  }
-}
 
 .result-card.primary {
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
   border-color: var(--primary-color);
   border-width: 3px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .result-card.primary {
-    background-color: #1e3a8a;
-  }
-}
 
 .result-card h4 {
   margin: 0 0 1rem 0;
@@ -227,7 +192,7 @@
 .result-note,
 .result-formula {
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-top: 0.5rem;
 }
 
@@ -241,7 +206,7 @@
   gap: 0.5rem;
   margin: 2rem 0;
   padding: 0.75rem 1.5rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
   border-radius: 0.5rem;
   color: var(--primary-color);
@@ -250,11 +215,6 @@
   transition: all 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .toggle-details-btn {
-    background-color: #374151;
-  }
-}
 
 .toggle-details-btn:hover {
   background-color: var(--primary-color);
@@ -269,11 +229,6 @@
   margin: 1rem 0 2rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .calculation-details {
-    background-color: #1e3a8a;
-  }
-}
 
 .calculation-details h4 {
   margin: 0 0 1.5rem 0;
@@ -281,25 +236,15 @@
   font-size: 1.2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .calculation-details h4 {
-    color: var(--primary-light);
-  }
-}
 
 .calc-step {
   margin: 1.5rem 0;
   padding: 1rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   border: 1px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .calc-step {
-    background-color: #1f2937;
-  }
-}
 
 .calc-step strong {
   display: block;
@@ -330,25 +275,15 @@
   border: 2px solid var(--success-medium);
 }
 
-@media (prefers-color-scheme: dark) {
-  .calc-step .success {
-    background-color: #065f46;
-  }
-}
 
 .chart-section {
   margin: 2rem 0;
   padding: 2rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chart-section {
-    background-color: #111827;
-  }
-}
 
 .chart-section h4 {
   margin: 0 0 0.5rem 0;
@@ -356,7 +291,7 @@
 }
 
 .chart-description {
-  color: #6b7280;
+  color: #9ca3af;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
 }
@@ -367,16 +302,11 @@
   max-width: 600px;
   margin: 0 auto;
   display: block;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   padding: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .equilibrium-chart {
-    background-color: #1f2937;
-  }
-}
 
 .interpretation-box {
   margin-top: 2rem;
@@ -386,11 +316,6 @@
   border-left: 4px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .interpretation-box {
-    background-color: #1e3a8a;
-  }
-}
 
 .interpretation-box h4 {
   margin: 0 0 1rem 0;

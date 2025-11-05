@@ -2,30 +2,20 @@
   max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .monetary-policy-simulator {
-    background-color: #1f2937;
-  }
-}
 
 .simulator-intro {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
   border-radius: 0.75rem;
   border-left: 4px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .simulator-intro {
-    background-color: #1e3a8a;
-  }
-}
 
 .simulator-intro h3 {
   margin: 0 0 0.5rem 0;
@@ -43,16 +33,11 @@
   gap: 2rem;
   margin-bottom: 2rem;
   padding: 2rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .simulator-controls {
-    background-color: #111827;
-  }
-}
 
 .main-control h4,
 .secondary-control h4 {
@@ -82,7 +67,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: white;
+  background: var(--card-bg);
   cursor: pointer;
   border: 3px solid var(--primary-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -92,7 +77,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: white;
+  background: var(--card-bg);
   cursor: pointer;
   border: 3px solid var(--primary-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -137,28 +122,18 @@
 
 .result-card {
   padding: 1.5rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .result-card {
-    background-color: #111827;
-  }
-}
 
 .result-card.primary {
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
   border-color: var(--primary-color);
   border-width: 3px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .result-card.primary {
-    background-color: #1e3a8a;
-  }
-}
 
 .result-card h4 {
   margin: 0 0 1rem 0;
@@ -179,7 +154,7 @@
 .result-note,
 .result-formula {
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-top: 0.5rem;
 }
 
@@ -193,7 +168,7 @@
   gap: 0.5rem;
   margin: 2rem 0;
   padding: 0.75rem 1.5rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border: 2px solid var(--primary-color);
   border-radius: 0.5rem;
   color: var(--primary-color);
@@ -202,11 +177,6 @@
   transition: all 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .toggle-details-btn {
-    background-color: #374151;
-  }
-}
 
 .toggle-details-btn:hover {
   background-color: var(--primary-color);
@@ -221,11 +191,6 @@
   margin: 1rem 0 2rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .transmission-details {
-    background-color: #1e3a8a;
-  }
-}
 
 .transmission-details h4 {
   margin: 0 0 1.5rem 0;
@@ -233,11 +198,6 @@
   font-size: 1.2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .transmission-details h4 {
-    color: var(--primary-light);
-  }
-}
 
 .transmission-chain {
   display: flex;
@@ -250,16 +210,11 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1.5rem;
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .transmission-step {
-    background-color: #1f2937;
-  }
-}
 
 .step-number {
   flex-shrink: 0;
@@ -309,16 +264,11 @@
 .scenario-analysis {
   margin: 2rem 0;
   padding: 2rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .scenario-analysis {
-    background-color: #111827;
-  }
-}
 
 .scenario-analysis h4 {
   margin: 0 0 1.5rem 0;
@@ -360,63 +310,33 @@
   border-color: #10b981;
 }
 
-@media (prefers-color-scheme: dark) {
-  .scenario-box.expansionary {
-    background-color: #065f46;
-  }
-}
 
 .scenario-box.expansionary h5 {
   color: #065f46;
 }
 
-@media (prefers-color-scheme: dark) {
-  .scenario-box.expansionary h5 {
-    color: #d1fae5;
-  }
-}
 
 .scenario-box.neutral {
   background-color: #dbeafe;
   border-color: #3b82f6;
 }
 
-@media (prefers-color-scheme: dark) {
-  .scenario-box.neutral {
-    background-color: #1e3a8a;
-  }
-}
 
 .scenario-box.neutral h5 {
   color: #1e40af;
 }
 
-@media (prefers-color-scheme: dark) {
-  .scenario-box.neutral h5 {
-    color: #dbeafe;
-  }
-}
 
 .scenario-box.restrictive {
   background-color: #fee2e2;
   border-color: #ef4444;
 }
 
-@media (prefers-color-scheme: dark) {
-  .scenario-box.restrictive {
-    background-color: #7f1d1d;
-  }
-}
 
 .scenario-box.restrictive h5 {
   color: #991b1b;
 }
 
-@media (prefers-color-scheme: dark) {
-  .scenario-box.restrictive h5 {
-    color: #fee2e2;
-  }
-}
 
 .recommendation {
   margin-top: 1rem;
@@ -427,11 +347,6 @@
   font-style: italic;
 }
 
-@media (prefers-color-scheme: dark) {
-  .recommendation {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-}
 
 .interpretation-box {
   margin-top: 2rem;
@@ -441,11 +356,6 @@
   border-left: 4px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .interpretation-box {
-    background-color: #1e3a8a;
-  }
-}
 
 .interpretation-box h4 {
   margin: 0 0 1rem 0;

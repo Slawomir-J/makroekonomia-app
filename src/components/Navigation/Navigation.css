@@ -44,7 +44,7 @@
 .navigation {
   width: 280px;
   height: 100vh;
-  background-color: #f8fafc;
+  background-color: var(--bg-color);
   border-right: 1px solid var(--border-color);
   padding: 1.5rem;
   overflow-y: auto;
@@ -55,11 +55,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  .navigation {
-    background-color: #111827;
-  }
-}
 
 .nav-header {
   margin-bottom: 2rem;
@@ -98,11 +93,6 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .mobile-close-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-}
 
 .nav-content {
   display: flex;
@@ -266,7 +256,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #6b7280;
+  color: #9ca3af;
   margin-bottom: 0.75rem;
 }
 
@@ -301,14 +291,9 @@
 }
 
 .chapter-toggle:hover {
-  background-color: #f3f4f6;
+  background-color: #374151;
 }
 
-@media (prefers-color-scheme: dark) {
-  .chapter-toggle:hover {
-    background-color: #374151;
-  }
-}
 
 .chapter-toggle.active {
   color: var(--primary-text);
@@ -318,19 +303,12 @@
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .chapter-toggle.active {
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-    color: var(--primary-medium);
-    border-color: #3b82f6;
-  }
-}
 
 .chapter-icon {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .chapter-title {
@@ -366,11 +344,6 @@
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .sublink:hover {
-    background-color: #1e3a8a;
-  }
-}
 
 .sublink.active {
   background: var(--primary-medium);
@@ -379,13 +352,6 @@
   border: 2px solid var(--primary-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  .sublink.active {
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-    color: var(--primary-medium);
-    border-color: #3b82f6;
-  }
-}
 
 .sublink-icon {
   flex-shrink: 0;

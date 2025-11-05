@@ -5,7 +5,7 @@
 }
 
 .flow-header {
-  background: white;
+  background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 2rem;
@@ -16,13 +16,13 @@
 .flow-header h2 {
   text-align: center;
   font-size: 1.5rem;
-  color: #1a202c;
+  color: #f3f4f6;
   margin: 0;
   font-weight: 700;
 }
 
 .simple-card {
-  background: white;
+  background: var(--card-bg);
   border: 2px solid #cbd5e0;
   border-radius: 12px;
   padding: 1.5rem;
@@ -34,7 +34,7 @@
 
 .simple-card.highlight {
   border-color: #48bb78;
-  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+  background: #064e3b;
   border-width: 3px;
 }
 
@@ -63,20 +63,20 @@
 .card-content h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
-  color: #1a202c;
+  color: #f3f4f6;
   font-weight: 700;
 }
 
 .card-content p {
   margin: 0;
-  color: #4a5568;
+  color: #9ca3af;
   font-size: 1rem;
   line-height: 1.6;
 }
 
 /* Arrow Box - większy i klarowniejszy */
 .arrow-box {
-  background: #f7fafc;
+  background: var(--box-bg);
   border: 2px dashed #cbd5e0;
   border-radius: 12px;
   padding: 1.5rem;
@@ -111,96 +111,37 @@
 }
 
 .op-tag.minus {
-  background: #fff5f5;
+  background: #7f1d1d;
   border-color: #fc8181;
-  color: #c53030;
+  color: #fca5a5;
 }
 
 .op-tag.plus {
-  background: #f0fff4;
+  background: #064e3b;
   border-color: #68d391;
-  color: #2f855a;
+  color: #6ee7b7;
 }
 
 /* Formula box */
 .formula-box {
   width: 100%;
-  background: white;
+  background: var(--card-bg);
   border: 2px solid #4299e1;
   border-radius: 8px;
   padding: 0.875rem 1.25rem;
   margin-top: 0.75rem;
   font-family: 'Courier New', Consolas, monospace;
   font-size: 1rem;
-  color: #2c5282;
+  color: #90cdf4;
   text-align: center;
 }
 
 .formula-box strong {
-  color: #2d3748;
+  color: var(--text-color);
   font-weight: 700;
   margin-right: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .flow-header {
-    background: #1f2937;
-    border-color: #60a5fa;
-  }
-
-  .flow-header h2 {
-    color: #f3f4f6;
-  }
-
-  .simple-card {
-    background: #1f2937;
-    border-color: #4b5563;
-  }
-
-  .simple-card.highlight {
-    background: linear-gradient(135deg, #064e3b 0%, #1f2937 100%);
-    border-color: #10b981;
-  }
-
-  .card-content h3 {
-    color: #f3f4f6;
-  }
-
-  .card-content p {
-    color: #d1d5db;
-  }
-
-  .arrow-box {
-    background: #111827;
-    border-color: #4b5563;
-  }
-
-  .arrow-icon {
-    color: #60a5fa;
-  }
-
-  .op-tag.minus {
-    background: #7f1d1d;
-    border-color: #f87171;
-    color: #fca5a5;
-  }
-
-  .op-tag.plus {
-    background: #064e3b;
-    border-color: #34d399;
-    color: #6ee7b7;
-  }
-
-  .formula-box {
-    background: #374151;
-    border-color: #60a5fa;
-    color: #93c5fd;
-  }
-
-  .formula-box strong {
-    color: #f3f4f6;
-  }
-}
 
 @media (max-width: 768px) {
   .flow-simple {

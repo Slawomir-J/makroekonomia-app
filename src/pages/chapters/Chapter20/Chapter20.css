@@ -35,19 +35,14 @@
 }
 
 .back-link:hover {
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
   transform: translateX(-4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  .back-link:hover {
-    background-color: #1e3a8a;
-  }
-}
 
 .chapter-subtitle {
   font-size: 1.1rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-top: 0.5rem;
 }
 
@@ -120,17 +115,12 @@
 .objectives {
   display: grid;
   gap: 0.75rem;
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
   padding: 1.5rem;
   border-radius: 0.75rem;
   border-left: 4px solid var(--primary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .objectives {
-    background-color: #1e3a8a;
-  }
-}
 
 .objective-item {
   font-size: 1.05rem;
@@ -138,18 +128,13 @@
 }
 
 .concept-card {
-  background-color: white;
+  background-color: transparent;
   padding: 1.5rem;
   border-radius: 0.75rem;
   border: 1px solid var(--border-color);
   margin-bottom: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .concept-card {
-    background-color: #1f2937;
-  }
-}
 
 .concept-card h3 {
   font-size: 1.375rem;
@@ -178,27 +163,15 @@
   margin: 0.75rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .formula {
-    background-color: #1e3a8a;
-    color: #fef3c7;
-  }
-}
 
 .formula-box {
-  background-color: #fffbeb;
+  background-color: transparent;
   padding: 1.5rem;
   border-radius: 0.75rem;
   margin: 1rem 0;
   border: 2px solid #fbbf24;
 }
 
-@media (prefers-color-scheme: dark) {
-  .formula-box {
-    background-color: #451a03;
-    border-color: var(--primary-dark);
-  }
-}
 
 .formula-box h4 {
   margin-top: 0;
@@ -206,27 +179,18 @@
   color: var(--primary-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  .formula-box h4 {
-    color: #fbbf24;
-  }
-}
 
 .formula-note {
   margin-top: 1rem;
   padding: 0.75rem;
-  background-color: white;
+  background-color: var(--formula-card-bg);
   border-radius: 0.5rem;
   text-align: left;
   font-family: inherit;
   font-size: 0.95rem;
+  color: #fef3c7;
 }
 
-@media (prefers-color-scheme: dark) {
-  .formula-note {
-    background-color: #292524;
-  }
-}
 
 .formula-explanation {
   margin: 1rem 0;
@@ -234,7 +198,9 @@
   font-size: 1rem;
   text-align: left;
   font-weight: normal;
+  color: #fbbf24;
 }
+
 
 .steps-list {
   margin: 1rem 0;
@@ -248,11 +214,12 @@
   font-family: inherit;
   font-weight: normal;
   font-size: 1rem;
-  color: inherit;
+  color: #fbbf24;
 }
 
+
 .note {
-  background-color: #e0f2fe;
+  background-color: #0c4a6e;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   font-size: 0.95rem;
@@ -263,25 +230,15 @@
   gap: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .note {
-    background-color: #0c4a6e;
-  }
-}
 
 .modern-example {
-  background-color: #f0fdf4;
+  background-color: #064e3b;
   padding: 1.5rem;
   border-radius: 0.75rem;
   margin: 1.5rem 0;
   border-left: 4px solid var(--success-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .modern-example {
-    background-color: #064e3b;
-  }
-}
 
 .modern-example h4 {
   margin-top: 0;
@@ -298,32 +255,22 @@
 }
 
 .data-highlight {
-  background-color: #dcfce7;
+  background-color: #14532d;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   font-weight: 600;
   margin: 1rem 0 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  .data-highlight {
-    background-color: #14532d;
-  }
-}
 
 .info-box {
-  background-color: #f0fdf4;
+  background-color: #064e3b;
   padding: 1.5rem;
   border-radius: 0.75rem;
   border-left: 4px solid var(--success-color);
   margin: 1.5rem 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .info-box {
-    background-color: #064e3b;
-  }
-}
 
 .info-box h4 {
   margin-top: 0;
@@ -338,18 +285,12 @@
 }
 
 .flow-item {
-  background-color: white;
+  background-color: #064e3b;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #d1fae5;
 }
 
-@media (prefers-color-scheme: dark) {
-  .flow-item {
-    background-color: #14532d;
-    border-color: #166534;
-  }
-}
 
 .flow-item strong {
   display: block;
@@ -381,11 +322,6 @@
   border-left: 4px solid var(--warning-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .example-box {
-    background-color: #1e3a8a;
-  }
-}
 
 .example-box h4 {
   margin-top: 0;
@@ -401,7 +337,9 @@
 .example-box li {
   margin: 0.5rem 0;
   line-height: 1.6;
+  color: #fef3c7;
 }
+
 
 .calculation-example {
   display: flex;
@@ -410,29 +348,27 @@
 }
 
 .calc-step {
-  background-color: white;
+  background-color: var(--formula-card-bg);
   padding: 1.25rem;
   border-radius: 0.5rem;
   border-left: 3px solid var(--primary-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  .calc-step {
-    background-color: #451a03;
-  }
-}
 
 .calc-step strong {
   display: block;
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
-  color: var(--warning-color);
+  color: #fbbf24;
 }
+
 
 .calc-step p {
   margin: 0.5rem 0;
   line-height: 1.6;
+  color: #fef3c7;
 }
+
 
 .calc-result {
   background-color: var(--primary-light);
@@ -443,12 +379,6 @@
   color: var(--primary-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  .calc-result {
-    background-color: #1e3a8a;
-    color: #fef3c7;
-  }
-}
 
 .calc-summary {
   background-color: #10b981;
@@ -476,18 +406,13 @@
 }
 
 .key-point {
-  background-color: #ede9fe;
+  background-color: #4c1d95;
   padding: 1rem 1.25rem;
   border-radius: 0.5rem;
   border-left: 3px solid #7c3aed;
   line-height: 1.6;
 }
 
-@media (prefers-color-scheme: dark) {
-  .key-point {
-    background-color: #4c1d95;
-  }
-}
 
 .key-point ul {
   margin: 0.5rem 0 0 1.5rem;
@@ -534,7 +459,7 @@
 
 .btn-secondary {
   background-color: #e5e7eb;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .btn-secondary:hover:not(:disabled) {
@@ -544,6 +469,29 @@
 .btn-secondary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.interpretation-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #064e3b;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--success-color);
+}
+
+.interpretation-box h4 {
+  margin: 0 0 1rem 0;
+  color: var(--success-color);
+}
+
+.interpretation-box p {
+  margin: 0.75rem 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.interpretation-box strong {
+  color: var(--success-color);
 }
 
 @media (max-width: 768px) {

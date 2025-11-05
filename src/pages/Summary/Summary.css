@@ -30,17 +30,12 @@
 /* Chapter Summary - Kompaktowy */
 .chapter-summary-compact {
   margin-bottom: 2.5rem;
-  background: #f0f9ff;
+  background: #1e3a8a;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
-@media (prefers-color-scheme: dark) {
-  .chapter-summary-compact {
-    background: #1e3a8a;
-  }
-}
 
 .chapter-badge-large {
   display: inline-block;
@@ -55,13 +50,14 @@
 
 .chapter-summary-compact h2 {
   font-size: 1.5rem;
-  color: #2d3748;
+  color: var(--text-color);
   margin-bottom: 1.25rem;
 }
 
+
 /* Formula Cards - Zwięźlejsze */
 .formula-card {
-  background: #fffbeb;
+  background: var(--formula-card-bg);
   padding: 1.25rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
@@ -69,18 +65,13 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .formula-card {
-    background: #451a03;
-  }
-}
-
 .formula-card h3 {
-  color: #1a202c;
+  color: var(--text-color);
   margin-bottom: 0.75rem;
   font-size: 1.2rem;
   font-weight: 700;
 }
+
 
 .formula-big {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -96,37 +87,38 @@
 }
 
 .formula-explain {
-  background: #f7fafc;
+  background: var(--box-bg);
   padding: 0.75rem;
   border-radius: 6px;
   margin-top: 0.5rem;
   font-size: 0.9rem;
   line-height: 1.6;
   border-left: 3px solid #4299e1;
-  color: #2d3748;
+  color: var(--text-color);
 }
 
 /* Practical Examples - Kompaktowe */
 .practical-example {
-  background: #fffaf0;
+  background: #064e3b;
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1rem;
-  border-left: 3px solid #ed8936;
+  border-left: 3px solid var(--success-color);
 }
 
 .practical-example h4 {
-  color: #9c4221;
+  color: var(--success-color);
   margin-bottom: 0.75rem;
   font-size: 1.05rem;
   font-weight: 700;
 }
 
+
 .practical-example p {
   margin: 0.4rem 0;
   line-height: 1.5;
   font-size: 0.9rem;
-  color: #2d3748;
+  color: var(--text-color);
 }
 
 .example-list {
@@ -138,22 +130,16 @@
 .example-list li {
   padding: 0.5rem;
   margin: 0.4rem 0;
-  background: #f0f9ff;
+  background: #14532d;
   border-radius: 6px;
   font-size: 0.9rem;
-  color: #2d3748;
-  border: 1px solid #fbd38d;
+  color: var(--text-color);
+  border: 1px solid var(--success-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .example-list li {
-    background: #1e3a8a;
-    color: #e2e8f0;
-  }
-}
 
 .example-list li strong {
-  color: #1a202c;
+  color: #f3f4f6;
 }
 
 .step-list {
@@ -165,29 +151,23 @@
 .step-list li {
   padding: 0.6rem;
   margin: 0.4rem 0;
-  background: #f0f9ff;
+  background: #14532d;
   border-radius: 6px;
   font-size: 0.9rem;
-  color: #2d3748;
-  border: 1px solid #fbd38d;
+  color: var(--text-color);
+  border: 1px solid var(--success-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .step-list li {
-    background: #1e3a8a;
-    color: #e2e8f0;
-  }
-}
 
 .step-list li strong {
-  color: #1a202c;
+  color: #f3f4f6;
 }
 
 .substep {
   margin-left: 1.5rem;
   margin-top: 0.3rem;
   font-size: 0.85rem;
-  color: #4a5568;
+  color: #9ca3af;
 }
 
 .result-box {
@@ -207,28 +187,21 @@
 }
 
 .calculation {
-  background: #f0f9ff;
+  background: #1e3a8a;
   padding: 0.75rem;
   border-radius: 6px;
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
   margin: 0.5rem 0;
   border-left: 3px solid #4299e1;
-  color: #1a202c;
+  color: #f3f4f6;
   border: 1px solid #bee3f8;
 }
 
-@media (prefers-color-scheme: dark) {
-  .calculation {
-    background: #1e3a8a;
-    color: #e2e8f0;
-    border-color: #4299e1;
-  }
-}
 
 .note-small {
   font-size: 0.85rem;
-  color: #4a5568;
+  color: #9ca3af;
   font-style: italic;
   margin-top: 0.5rem;
 }
@@ -241,35 +214,30 @@
 
 .comparison-list li {
   padding: 0.4rem 0.75rem;
-  background: #f0f9ff;
+  background: #14532d;
   border-radius: 6px;
   margin: 0.3rem 0;
   font-size: 0.9rem;
-  color: #2d3748;
-  border: 1px solid #fbd38d;
+  color: var(--text-color);
+  border: 1px solid var(--success-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .comparison-list li {
-    background: #1e3a8a;
-    color: #e2e8f0;
-  }
-}
 
 /* Key Insights */
 .key-insight {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  background: #fff5f5;
+  background: var(--insight-bg);
   border-left: 3px solid #f56565;
   padding: 0.75rem;
   border-radius: 6px;
   margin-top: 0.75rem;
-  color: #c53030;
+  color: #fca5a5;
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
 
 /* Year Comparison */
 .year-comparison {
@@ -280,26 +248,19 @@
 }
 
 .year-box {
-  background: #f0f9ff;
+  background: #1e3a8a;
   padding: 0.75rem;
   border-radius: 6px;
   font-size: 0.85rem;
   border: 2px solid #cbd5e0;
-  color: #2d3748;
+  color: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .year-box {
-    background: #1e3a8a;
-    color: #e2e8f0;
-    border-color: #4299e1;
-  }
-}
 
 .year-box strong {
   display: block;
   margin-bottom: 0.5rem;
-  color: #5a67d8;
+  color: #a5b4fc;
   font-weight: 700;
 }
 
@@ -319,23 +280,23 @@
 }
 
 .bad-box {
-  background: #fff5f5;
+  background: var(--insight-bg);
   border: 2px solid #fc8181;
-  color: #742a2a;
+  color: #fbb6ce;
 }
 
 .bad-box strong {
-  color: #9b2c2c;
+  color: #fca5a5;
 }
 
 .good-box {
-  background: #f0fff4;
+  background: var(--good-bg);
   border: 2px solid #68d391;
-  color: #22543d;
+  color: #a7f3d0;
 }
 
 .good-box strong {
-  color: #276749;
+  color: #6ee7b7;
 }
 
 /* Scenario Grid */
@@ -354,40 +315,40 @@
 }
 
 .scenario.good {
-  background: #f0fff4;
+  background: var(--good-bg);
   border-color: #68d391;
-  color: #22543d;
+  color: #a7f3d0;
 }
 
 .scenario.good strong {
-  color: #276749;
+  color: #6ee7b7;
 }
 
 .scenario.neutral {
-  background: #edf2f7;
+  background: var(--box-bg);
   border-color: #cbd5e0;
-  color: #2d3748;
+  color: var(--text-color);
 }
 
 .scenario.neutral strong {
-  color: #1a202c;
+  color: #f3f4f6;
 }
 
 .scenario.bad {
-  background: #fff5f5;
+  background: var(--insight-bg);
   border-color: #fc8181;
-  color: #742a2a;
+  color: #fbb6ce;
 }
 
 .scenario.bad strong {
-  color: #9b2c2c;
+  color: #fca5a5;
 }
 
 .scenario em {
   display: block;
   margin-top: 0.4rem;
   font-size: 0.8rem;
-  color: #4a5568;
+  color: #9ca3af;
 }
 
 /* Tool Grid */
@@ -399,60 +360,41 @@
 }
 
 .tool-box {
-  background: #fffbeb;
+  background: var(--formula-card-bg);
   padding: 1rem;
   border-radius: 8px;
   border: 2px solid #cbd5e0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tool-box {
-    background: #451a03;
-    border-color: #4299e1;
-  }
-}
 
 .tool-box.highlight {
-  border-color: #5a67d8;
-  background: #ebf4ff;
+  border-color: #a5b4fc;
+  background: #1e3a8a;
 }
 
-@media (prefers-color-scheme: dark) {
-  .tool-box.highlight {
-    background: #1e3a8a;
-    border-color: #667eea;
-  }
-}
 
 .tool-box h4 {
-  color: #1a202c;
+  color: #f3f4f6;
   margin-bottom: 0.75rem;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .effect-box {
-  background: #f0f9ff;
+  background: #1e3a8a;
   padding: 0.75rem;
   border-radius: 6px;
   font-size: 0.85rem;
   line-height: 1.6;
-  color: #2d3748;
+  color: var(--text-color);
   border: 1px solid #e2e8f0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .effect-box {
-    background: #1e3a8a;
-    color: #e2e8f0;
-    border-color: #4299e1;
-  }
-}
 
 .effect-box strong {
   display: block;
   margin-bottom: 0.5rem;
-  color: #5a67d8;
+  color: #a5b4fc;
   font-weight: 700;
 }
 
@@ -465,40 +407,27 @@
 }
 
 .money-level {
-  background: #f0f9ff;
+  background: #1e3a8a;
   padding: 0.75rem;
   border-radius: 6px;
   border-left: 4px solid #4299e1;
   font-size: 0.9rem;
-  color: #2d3748;
+  color: var(--text-color);
   border: 1px solid #bee3f8;
 }
 
-@media (prefers-color-scheme: dark) {
-  .money-level {
-    background: #1e3a8a;
-    color: #e2e8f0;
-    border-color: #4299e1;
-  }
-}
 
 .money-level.highlight {
-  background: #ebf4ff;
-  border-left-color: #5a67d8;
+  background: #1e3a8a;
+  border-left-color: #a5b4fc;
   font-weight: 600;
   border: 2px solid #5a67d8;
 }
 
-@media (prefers-color-scheme: dark) {
-  .money-level.highlight {
-    background: #1e3a8a;
-    border-color: #667eea;
-  }
-}
 
 .money-level strong {
   display: block;
-  color: #2c5282;
+  color: #90cdf4;
   margin-bottom: 0.25rem;
   font-weight: 700;
 }
@@ -506,7 +435,7 @@
 .money-level em {
   display: block;
   font-size: 0.8rem;
-  color: #4a5568;
+  color: #9ca3af;
   margin-top: 0.25rem;
 }
 
@@ -563,19 +492,19 @@
   border-radius: 4px;
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
-  color: #e2e8f0;
+  color: var(--text-color);
 }
 
 /* Tips Compact */
 .tips-compact {
-  background: linear-gradient(135deg, #fef5e7 0%, #feebc8 100%);
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 2rem;
 }
 
 .tips-compact h2 {
-  color: #744210;
+  color: #fbbf24;
   margin-bottom: 1rem;
   font-size: 1.5rem;
   display: flex;
@@ -591,24 +520,18 @@
 }
 
 .tip-item {
-  background: #fffbeb;
+  background: var(--formula-card-bg);
   padding: 0.9rem;
   border-radius: 8px;
   border-left: 4px solid #dd6b20;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #2d3748;
+  color: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .tip-item {
-    background: #451a03;
-    color: #e2e8f0;
-  }
-}
 
 .tip-item strong {
-  color: #9c4221;
+  color: #fbb6ce;
   margin-right: 0.5rem;
   font-weight: 700;
 }
@@ -617,19 +540,14 @@
 .chapters-links {
   text-align: center;
   padding: 1.5rem;
-  background: #f0f9ff;
+  background: #1e3a8a;
   border-radius: 12px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .chapters-links {
-    background: #1e3a8a;
-  }
-}
 
 .chapters-links h3 {
   margin-bottom: 1rem;
-  color: #2d3748;
+  color: var(--text-color);
 }
 
 .chapters-grid {
@@ -645,7 +563,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
-  background: #f0f9ff;
+  background: #1e3a8a;
   color: #667eea;
   text-decoration: none;
   border-radius: 8px;
@@ -655,13 +573,6 @@
   transition: all 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  .chapter-link-compact,
-  .exam-link-compact {
-    background: #1e3a8a;
-    color: #a5b4fc;
-  }
-}
 
 .chapter-link-compact:hover,
 .exam-link-compact:hover {
@@ -731,6 +642,8 @@
     padding: 0 0.5rem;
   }
 }
+
+/* Dark mode text color fixes */
 
 /* Print */
 @media print {

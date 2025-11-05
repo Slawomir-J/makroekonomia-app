@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Calculator, BookOpen, Lightbulb, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Calculator, BookOpen, Lightbulb, CheckCircle, ChevronRight, Home } from 'lucide-react';
 import { exampleProblems, problemCategories } from '../../data/example-problems';
 import './ProblemDetail.css';
 
@@ -32,6 +32,22 @@ export default function ProblemDetail() {
 
   return (
     <div className="problem-detail-page">
+      {/* Breadcrumbs */}
+      <nav className="breadcrumbs">
+        <button onClick={() => navigate('/')} className="breadcrumb-item">
+          <Home size={14} />
+          Strona główna
+        </button>
+        <ChevronRight size={14} className="breadcrumb-separator" />
+        <button onClick={() => navigate('/example-problems')} className="breadcrumb-item">
+          Zadania Przykładowe
+        </button>
+        <ChevronRight size={14} className="breadcrumb-separator" />
+        <span className="breadcrumb-item breadcrumb-current">
+          {categoryInfo?.title || 'Zadanie'}
+        </span>
+      </nav>
+
       {/* Header */}
       <div className="problem-detail-header">
         <button onClick={() => navigate('/example-problems')} className="back-button">

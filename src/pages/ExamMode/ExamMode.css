@@ -7,17 +7,12 @@
 
 /* ===== EKRAN SETUP ===== */
 .exam-setup {
-  background-color: white;
+  background-color: var(--card-bg);
   border-radius: 1.5rem;
   padding: 3rem 2rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .exam-setup {
-    background-color: #1f2937;
-  }
-}
 
 .setup-header {
   text-align: center;
@@ -38,14 +33,9 @@
 .setup-header p {
   margin: 0;
   font-size: 1.1rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
-@media (prefers-color-scheme: dark) {
-  .setup-header p {
-    color: #9ca3af;
-  }
-}
 
 /* Formularz ustawień */
 .setup-form {
@@ -77,17 +67,12 @@
   border: 2px solid var(--border-color);
   border-radius: 0.75rem;
   font-size: 1rem;
-  background-color: white;
+  background-color: var(--card-bg);
   color: var(--text-color);
   cursor: pointer;
   transition: all 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .setting-group select {
-    background-color: #374151;
-  }
-}
 
 .setting-group select:hover {
   border-color: var(--primary-color);
@@ -111,7 +96,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
-  background-color: #f9fafb;
+  background-color: var(--text-color);
   border: 2px solid var(--border-color);
   border-radius: 0.75rem;
   cursor: pointer;
@@ -119,22 +104,12 @@
   font-weight: 500;
 }
 
-@media (prefers-color-scheme: dark) {
-  .checkbox-label {
-    background-color: #374151;
-  }
-}
 
 .checkbox-label:hover {
   border-color: var(--primary-color);
-  background-color: #f0f9ff;
+  background-color: #1e3a8a;
 }
 
-@media (prefers-color-scheme: dark) {
-  .checkbox-label:hover {
-    background-color: #1e3a8a;
-  }
-}
 
 .checkbox-label input[type="checkbox"] {
   width: 20px;
@@ -200,7 +175,7 @@
 
 /* Pasek postępu */
 .exam-progress-bar {
-  background-color: white;
+  background-color: var(--card-bg);
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -210,11 +185,6 @@
   z-index: 100;
 }
 
-@media (prefers-color-scheme: dark) {
-  .exam-progress-bar {
-    background-color: #1f2937;
-  }
-}
 
 .progress-info {
   display: flex;
@@ -232,11 +202,6 @@
   overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  .progress-track {
-    background-color: #4b5563;
-  }
-}
 
 .progress-fill {
   height: 100%;
@@ -247,17 +212,12 @@
 
 /* Kontener pytania */
 .question-container {
-  background-color: white;
+  background-color: var(--card-bg);
   padding: 2rem;
   border-radius: 0.75rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .question-container {
-    background-color: #1f2937;
-  }
-}
 
 /* Pytanie teoretyczne */
 .theory-question-title {
@@ -305,33 +265,6 @@
   color: #BE123C;
 }
 
-@media (prefers-color-scheme: dark) {
-  .exam-mode-container .explanation {
-    background-color: #064e3b;
-    border-color: #10b981;
-  }
-
-  .exam-mode-container .explanation.incorrect {
-    background-color: #7f1d1d;
-    border-color: #f87171;
-  }
-
-  .exam-mode-container .explanation-header {
-    color: #6ee7b7;
-  }
-
-  .exam-mode-container .explanation.incorrect .explanation-header {
-    color: #fca5a5;
-  }
-
-  .exam-mode-container .explanation p {
-    color: #d1fae5;
-  }
-
-  .exam-mode-container .explanation.incorrect p {
-    color: #fecaca;
-  }
-}
 
 /* Przyciski akcji */
 .exam-actions {

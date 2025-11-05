@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BookOpen, ChevronRight, Filter, Search } from 'lucide-react';
+import { BookOpen, ChevronRight, Filter, Search, Home } from 'lucide-react';
 import { exampleProblems, problemCategories } from '../../data/example-problems';
 import type { ProblemCategory, ProblemDifficulty } from '../../types';
 import './ExampleProblems.css';
@@ -45,6 +45,18 @@ export default function ExampleProblems() {
 
   return (
     <div className="example-problems-page">
+      {/* Breadcrumbs */}
+      <nav className="breadcrumbs">
+        <button onClick={() => navigate('/')} className="breadcrumb-item">
+          <Home size={14} />
+          Strona główna
+        </button>
+        <ChevronRight size={14} className="breadcrumb-separator" />
+        <span className="breadcrumb-item breadcrumb-current">
+          Zadania Przykładowe
+        </span>
+      </nav>
+
       <div className="page-header">
         <div className="header-content">
           <div className="header-icon">

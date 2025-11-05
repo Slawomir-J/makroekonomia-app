@@ -11,11 +11,11 @@
 
   /* Paleta pastelowa - niebieski (główny) */
   --primary-color: #2563eb;
-  --primary-light: #DBEAFE;
-  --primary-medium: #BFDBFE;
+  --primary-light: #1e3a8a;
+  --primary-medium: #1e40af;
   --primary-dark: #93C5FD;
   --primary-darker: #60A5FA;
-  --primary-text: #1E3A8A;
+  --primary-text: #60a5fa;
 
   /* Paleta pastelowa - zielony (sukces/pozytywne) */
   --success-lightest: #ECFDF5;
@@ -31,26 +31,31 @@
   --error-text: #831843;
   --error-color: #FBCFE8;
 
-  /* Neutralne */
-  --bg-color: #ffffff;
-  --bg-gray-lightest: #F9FAFB;
-  --bg-gray-light: #F3F4F6;
-  --bg-gray-medium: #E5E7EB;
-  --text-color: #1f2937;
-  --border-color: #e5e7eb;
+  /* Neutralne - DARK MODE ONLY */
+  --bg-color: #1f2937;
+  --bg-gray-lightest: #374151;
+  --bg-gray-light: #374151;
+  --bg-gray-medium: #4b5563;
+  --text-color: #f9fafb;
+  --border-color: #374151;
+
+  /* Tła dla kart i boxów - DARK MODE */
+  --card-bg: #1f2937;
+  --box-bg: #374151;
+  --input-bg: #1f2937;
+
+  /* Tła dla różnych typów boxów - DARK MODE */
+  --formula-card-bg: #451a03;
+  --example-bg: #451a03;
+  --insight-bg: #7f1d1d;
+  --good-bg: #064e3b;
+  --bad-bg: #7f1d1d;
 
   /* Deprecated - do usunięcia w przyszłości */
   --secondary-color: #1e40af;
   --warning-color: #f59e0b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #1f2937;
-    --text-color: #f9fafb;
-    --border-color: #374151;
-  }
-}
 
 body {
   margin: 0;
