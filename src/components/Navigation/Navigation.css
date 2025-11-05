@@ -1,3 +1,46 @@
+/* Mobile Menu Button (hidden on desktop) */
+.mobile-menu-button {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.mobile-menu-button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(2px);
+}
+
 .navigation {
   width: 280px;
   height: 100vh;
@@ -8,6 +51,8 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +63,9 @@
 
 .nav-header {
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-logo {
@@ -28,6 +76,32 @@
 .nav-logo h2 {
   font-size: 1.25rem;
   margin: 0;
+}
+
+/* Mobile Close Button (hidden on desktop) */
+.mobile-close-button {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-close-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .mobile-close-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .nav-content {
@@ -147,6 +221,44 @@
 }
 
 .tools-text {
+  flex: 1;
+}
+
+/* Example Problems Link */
+.example-problems-link-container {
+  margin-bottom: 1.5rem;
+}
+
+.example-problems-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #DDD6FE 0%, #C4B5FD 100%);
+  color: #4C1D95;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(196, 181, 253, 0.2);
+  border: 2px solid #C4B5FD;
+}
+
+.example-problems-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 181, 253, 0.4);
+  text-decoration: none;
+  color: #4C1D95;
+  background: linear-gradient(135deg, #C4B5FD 0%, #A78BFA 100%);
+}
+
+.example-problems-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.example-problems-text {
   flex: 1;
 }
 
@@ -285,11 +397,63 @@
 }
 
 @media (max-width: 768px) {
+  /* Show mobile menu button */
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  /* Show mobile close button */
+  .mobile-close-button {
+    display: flex;
+  }
+
+  /* Hide navigation by default (slide out to left) */
   .navigation {
-    width: 100%;
-    height: auto;
-    position: relative;
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
+    transform: translateX(-100%);
+    width: 85%;
+    max-width: 320px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show navigation when mobile-open class is added */
+  .navigation.mobile-open {
+    transform: translateX(0);
+  }
+
+  /* Show overlay when menu is open */
+  .mobile-menu-overlay {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Increase touch targets for mobile */
+  .chapter-toggle {
+    padding: 1rem 1.25rem;
+    min-height: 48px;
+    font-size: 1rem;
+  }
+
+  .sublink {
+    padding: 0.875rem 1rem 0.875rem 2.5rem;
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+
+  .summary-link,
+  .exam-mode-link,
+  .tools-link,
+  .example-problems-link {
+    padding: 1.125rem 1.5rem;
+    min-height: 56px;
+    font-size: 1.05rem;
   }
 }

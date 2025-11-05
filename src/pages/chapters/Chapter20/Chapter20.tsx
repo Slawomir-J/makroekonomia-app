@@ -93,8 +93,28 @@ export default function Chapter20() {
             Roczna stopa inflacji to procentowy wzrost przeciętnego poziomu cen
             dóbr i usług w ciągu roku.
           </p>
-          <div className="formula">
-            Stopa inflacji = [(CPI_t - CPI_(t-1)) / CPI_(t-1)] × 100%
+          <div className="formula-box">
+            <div className="formula">
+              Stopa inflacji = [(CPI_t - CPI_(t-1)) / CPI_(t-1)] × 100%
+            </div>
+            <p className="formula-explanation">
+              <strong>Odczytywanie wzoru:</strong>
+            </p>
+            <ul className="formula-explanation">
+              <li><strong>CPI_t</strong> = wskaźnik cen konsumpcyjnych w bieżącym roku (current period)</li>
+              <li><strong>CPI_(t-1)</strong> = wskaźnik cen konsumpcyjnych w roku poprzednim</li>
+              <li><strong>(CPI_t - CPI_(t-1))</strong> = zmiana poziomu cen między rokami</li>
+              <li><strong>/ CPI_(t-1)</strong> = dzielimy przez poziom wyjściowy (rok poprzedni)</li>
+              <li><strong>× 100%</strong> = zamieniamy na procenty</li>
+            </ul>
+            <div className="example-box">
+              <h4>Przykład:</h4>
+              <p>CPI w 2023 r. = 120, CPI w 2022 r. = 110</p>
+              <p className="calc-result">Stopa inflacji = [(120 - 110) / 110] × 100% = (10/110) × 100% = 9,1%</p>
+              <p className="highlight">
+                Ceny wzrosły o 9,1% w ciągu roku - jeśli coś kosztowało 100 zł w 2022, to w 2023 kosztuje 109,10 zł.
+              </p>
+            </div>
           </div>
 
           <div className="modern-example">

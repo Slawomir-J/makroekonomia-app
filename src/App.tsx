@@ -21,6 +21,8 @@ import Chapter24Quiz from './pages/chapters/Chapter24/Chapter24Quiz';
 import Chapter24Simulator from './pages/chapters/Chapter24/Chapter24Simulator';
 import ExamMode from './pages/ExamMode/ExamMode';
 import Tools from './pages/Tools/Tools';
+import ExampleProblems from './pages/ExampleProblems/ExampleProblems';
+import ProblemDetail from './pages/ExampleProblems/ProblemDetail';
 import './App.css';
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
           <Route path="summary" element={<Summary />} />
           <Route path="exam-mode" element={<ExamMode />} />
           <Route path="tools" element={<Tools />} />
+          <Route path="example-problems" element={<ExampleProblems />} />
+          <Route path="example-problems/:problemId" element={<ProblemDetail />} />
           <Route path="chapter/20" element={<Chapter20 />} />
           <Route path="chapter/20/quiz" element={<Chapter20Quiz />} />
           <Route path="chapter/20/calculator" element={<Chapter20Calculator />} />

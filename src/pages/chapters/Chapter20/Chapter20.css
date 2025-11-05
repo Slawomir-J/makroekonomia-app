@@ -547,6 +547,10 @@
 }
 
 @media (max-width: 768px) {
+  .chapter {
+    padding: 0 0.75rem;
+  }
+
   .chapter-header h1 {
     font-size: 1.75rem;
   }
@@ -570,5 +574,29 @@
 
   .calc-step {
     padding: 1rem;
+  }
+
+  /* Optimize paddings for mobile */
+  .concept-card,
+  .example-box,
+  .info-box,
+  .modern-example {
+    padding: 1rem;
+  }
+
+  .formula-box {
+    padding: 1rem;
+  }
+
+  .objectives {
+    padding: 1rem;
+  }
+
+  .chapter-section {
+    margin-bottom: 2rem;
+  }
+
+  .interactive-link {
+    padding: 0.875rem 1.25rem;
   }
 }

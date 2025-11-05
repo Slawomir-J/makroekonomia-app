@@ -30,10 +30,16 @@
 /* Chapter Summary - Kompaktowy */
 .chapter-summary-compact {
   margin-bottom: 2.5rem;
-  background: white;
+  background: #f0f9ff;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  .chapter-summary-compact {
+    background: #1e3a8a;
+  }
 }
 
 .chapter-badge-large {
@@ -55,12 +61,18 @@
 
 /* Formula Cards - Zwięźlejsze */
 .formula-card {
-  background: #ffffff;
+  background: #fffbeb;
   padding: 1.25rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
   border-left: 4px solid #4299e1;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .formula-card {
+    background: #451a03;
+  }
 }
 
 .formula-card h3 {
@@ -126,11 +138,18 @@
 .example-list li {
   padding: 0.5rem;
   margin: 0.4rem 0;
-  background: #ffffff;
+  background: #f0f9ff;
   border-radius: 6px;
   font-size: 0.9rem;
   color: #2d3748;
   border: 1px solid #fbd38d;
+}
+
+@media (prefers-color-scheme: dark) {
+  .example-list li {
+    background: #1e3a8a;
+    color: #e2e8f0;
+  }
 }
 
 .example-list li strong {
@@ -146,11 +165,18 @@
 .step-list li {
   padding: 0.6rem;
   margin: 0.4rem 0;
-  background: #ffffff;
+  background: #f0f9ff;
   border-radius: 6px;
   font-size: 0.9rem;
   color: #2d3748;
   border: 1px solid #fbd38d;
+}
+
+@media (prefers-color-scheme: dark) {
+  .step-list li {
+    background: #1e3a8a;
+    color: #e2e8f0;
+  }
 }
 
 .step-list li strong {
@@ -181,7 +207,7 @@
 }
 
 .calculation {
-  background: #ffffff;
+  background: #f0f9ff;
   padding: 0.75rem;
   border-radius: 6px;
   font-family: 'Courier New', monospace;
@@ -190,6 +216,14 @@
   border-left: 3px solid #4299e1;
   color: #1a202c;
   border: 1px solid #bee3f8;
+}
+
+@media (prefers-color-scheme: dark) {
+  .calculation {
+    background: #1e3a8a;
+    color: #e2e8f0;
+    border-color: #4299e1;
+  }
 }
 
 .note-small {
@@ -207,12 +241,19 @@
 
 .comparison-list li {
   padding: 0.4rem 0.75rem;
-  background: #ffffff;
+  background: #f0f9ff;
   border-radius: 6px;
   margin: 0.3rem 0;
   font-size: 0.9rem;
   color: #2d3748;
   border: 1px solid #fbd38d;
+}
+
+@media (prefers-color-scheme: dark) {
+  .comparison-list li {
+    background: #1e3a8a;
+    color: #e2e8f0;
+  }
 }
 
 /* Key Insights */
@@ -239,12 +280,20 @@
 }
 
 .year-box {
-  background: #ffffff;
+  background: #f0f9ff;
   padding: 0.75rem;
   border-radius: 6px;
   font-size: 0.85rem;
   border: 2px solid #cbd5e0;
   color: #2d3748;
+}
+
+@media (prefers-color-scheme: dark) {
+  .year-box {
+    background: #1e3a8a;
+    color: #e2e8f0;
+    border-color: #4299e1;
+  }
 }
 
 .year-box strong {
@@ -350,15 +399,29 @@
 }
 
 .tool-box {
-  background: #ffffff;
+  background: #fffbeb;
   padding: 1rem;
   border-radius: 8px;
   border: 2px solid #cbd5e0;
 }
 
+@media (prefers-color-scheme: dark) {
+  .tool-box {
+    background: #451a03;
+    border-color: #4299e1;
+  }
+}
+
 .tool-box.highlight {
   border-color: #5a67d8;
   background: #ebf4ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tool-box.highlight {
+    background: #1e3a8a;
+    border-color: #667eea;
+  }
 }
 
 .tool-box h4 {
@@ -369,13 +432,21 @@
 }
 
 .effect-box {
-  background: #ffffff;
+  background: #f0f9ff;
   padding: 0.75rem;
   border-radius: 6px;
   font-size: 0.85rem;
   line-height: 1.6;
   color: #2d3748;
   border: 1px solid #e2e8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .effect-box {
+    background: #1e3a8a;
+    color: #e2e8f0;
+    border-color: #4299e1;
+  }
 }
 
 .effect-box strong {
@@ -394,7 +465,7 @@
 }
 
 .money-level {
-  background: #ffffff;
+  background: #f0f9ff;
   padding: 0.75rem;
   border-radius: 6px;
   border-left: 4px solid #4299e1;
@@ -403,11 +474,26 @@
   border: 1px solid #bee3f8;
 }
 
+@media (prefers-color-scheme: dark) {
+  .money-level {
+    background: #1e3a8a;
+    color: #e2e8f0;
+    border-color: #4299e1;
+  }
+}
+
 .money-level.highlight {
   background: #ebf4ff;
   border-left-color: #5a67d8;
   font-weight: 600;
   border: 2px solid #5a67d8;
+}
+
+@media (prefers-color-scheme: dark) {
+  .money-level.highlight {
+    background: #1e3a8a;
+    border-color: #667eea;
+  }
 }
 
 .money-level strong {
@@ -505,13 +591,20 @@
 }
 
 .tip-item {
-  background: #ffffff;
+  background: #fffbeb;
   padding: 0.9rem;
   border-radius: 8px;
   border-left: 4px solid #dd6b20;
   font-size: 0.95rem;
   line-height: 1.5;
   color: #2d3748;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tip-item {
+    background: #451a03;
+    color: #e2e8f0;
+  }
 }
 
 .tip-item strong {
@@ -524,8 +617,14 @@
 .chapters-links {
   text-align: center;
   padding: 1.5rem;
-  background: #f7fafc;
+  background: #f0f9ff;
   border-radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .chapters-links {
+    background: #1e3a8a;
+  }
 }
 
 .chapters-links h3 {
@@ -546,7 +645,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
-  background: white;
+  background: #f0f9ff;
   color: #667eea;
   text-decoration: none;
   border-radius: 8px;
@@ -554,6 +653,14 @@
   font-size: 0.95rem;
   border: 2px solid #667eea;
   transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .chapter-link-compact,
+  .exam-link-compact {
+    background: #1e3a8a;
+    color: #a5b4fc;
+  }
 }
 
 .chapter-link-compact:hover,
@@ -577,7 +684,12 @@
 /* Responsive */
 @media (max-width: 768px) {
   .summary-page {
-    padding: 1rem;
+    padding: 0.75rem;
+  }
+
+  .summary-header {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
   }
 
   .summary-header h1 {
@@ -596,6 +708,27 @@
 
   .tool-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Optimize paddings for mobile */
+  .chapter-summary-compact {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .formula-card {
+    padding: 1rem;
+  }
+
+  .practical-example,
+  .tool-box,
+  .cheat-sheet,
+  .tips-compact {
+    padding: 1rem;
+  }
+
+  .setup-form {
+    padding: 0 0.5rem;
   }
 }
 

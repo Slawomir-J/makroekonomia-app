@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, Menu, X } from 'lucide-react';
 import './Navigation.css';
 
 interface SubLink {
@@ -74,6 +74,7 @@ const chapters: Chapter[] = [
 export default function Navigation() {
   const location = useLocation();
   const [expandedChapters, setExpandedChapters] = useState<string[]>([]);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleChapter = (chapterId: string) => {
     if (expandedChapters.includes(chapterId)) {
@@ -81,6 +82,10 @@ export default function Navigation() {
     } else {
       setExpandedChapters([...expandedChapters, chapterId]);
     }
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
   };
 
   // Auto-expand current chapter
@@ -94,13 +99,44 @@ export default function Navigation() {
     }
   }, [location.pathname]);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    closeMobileMenu();
+  }, [location.pathname]);
+
   return (
-    <nav className="navigation">
-      <div className="nav-header">
-        <Link to="/" className="nav-logo">
-          <h2>📊 Makroekonomia</h2>
-        </Link>
-      </div>
+    <>
+      {/* Mobile Menu Button */}
+      <button
+        className="mobile-menu-button"
+        onClick={() => setMobileMenuOpen(true)}
+        aria-label="Otwórz menu"
+      >
+        <Menu size={24} />
+      </button>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={closeMobileMenu}
+        />
+      )}
+
+      {/* Navigation Sidebar */}
+      <nav className={`navigation ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+        <div className="nav-header">
+          <Link to="/" className="nav-logo">
+            <h2>📊 Makroekonomia</h2>
+          </Link>
+          <button
+            className="mobile-close-button"
+            onClick={closeMobileMenu}
+            aria-label="Zamknij menu"
+          >
+            <X size={24} />
+          </button>
+        </div>
 
       <div className="nav-content">
         <div className="exam-mode-link-container">
@@ -114,6 +150,13 @@ export default function Navigation() {
           <Link to="/tools" className="tools-link">
             <span className="tools-icon">🧮</span>
             <span className="tools-text">Narzędzia</span>
+          </Link>
+        </div>
+
+        <div className="example-problems-link-container">
+          <Link to="/example-problems" className="example-problems-link">
+            <span className="example-problems-icon">📚</span>
+            <span className="example-problems-text">Zadania Przykładowe</span>
           </Link>
         </div>
 
@@ -162,6 +205,7 @@ export default function Navigation() {
           </Link>
         </div>
       </div>
-    </nav>
+      </nav>
+    </>
   );
 }

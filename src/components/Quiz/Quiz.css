@@ -258,6 +258,23 @@
   margin-top: 2rem;
 }
 
+@media (max-width: 768px) {
+  .quiz-actions {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: -1rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+}
+
 .quiz-actions button {
   padding: 0.75rem 2rem;
   font-size: 1rem;
@@ -435,5 +452,23 @@
 
   .score-fraction {
     font-size: 1.25rem;
+  }
+
+  /* Increase touch targets for better mobile UX */
+  .option-item {
+    padding: 1.25rem 1.5rem;
+    min-height: 60px;
+  }
+
+  .quiz-actions button {
+    padding: 1rem 2rem;
+    min-height: 48px;
+    font-size: 1.05rem;
+  }
+
+  .option-indicator input[type="checkbox"],
+  .option-indicator input[type="radio"] {
+    width: 24px;
+    height: 24px;
   }
 }

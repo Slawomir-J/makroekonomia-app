@@ -209,5 +209,19 @@
   .chapter-card {
     flex-direction: column;
     text-align: center;
+    padding: 1.25rem;
+    min-height: 120px;
+  }
+
+  /* Increase touch targets */
+  .cta-button {
+    padding: 1.125rem 2.5rem;
+    min-height: 52px;
+    font-size: 1.15rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+    min-height: 140px;
   }
 }

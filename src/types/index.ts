@@ -82,3 +82,68 @@ export interface ExamResult {
   }[];
   weakAreas: string[]; // chapter IDs where user struggled
 }
+
+// Example problem categories
+export type ProblemCategory =
+  | 'pkb-value-added'
+  | 'pkb-real-nominal'
+  | 'consumption-savings'
+  | 'multiplier'
+  | 'equilibrium'
+  | 'fiscal-policy'
+  | 'money-creation';
+
+export type ProblemDifficulty = 'easy' | 'medium' | 'hard';
+
+// Example problem with comprehensive solution
+export interface ExampleProblem {
+  id: string;
+  title: string;
+  category: ProblemCategory;
+  difficulty: ProblemDifficulty;
+  description: string;
+  givens: { [key: string]: string | number };
+  questions: string[]; // Sub-questions (a, b, c, etc.)
+  solution: ProblemSolution;
+  relatedTopics: string[];
+  keywords: string[];
+}
+
+export interface ProblemSolution {
+  steps: DetailedStep[];
+  finalAnswers: { [key: string]: string | number }; // answers to sub-questions
+  interpretation?: string;
+  practicalImplications?: string[];
+}
+
+export interface DetailedStep {
+  stepNumber: number;
+  title: string;
+  description: string;
+  formulas?: string[];
+  calculations?: CalculationDetail[];
+  result?: string;
+  note?: string;
+}
+
+export interface CalculationDetail {
+  expression: string;
+  explanation?: string;
+  result: string | number;
+}
+
+// Category metadata
+export interface ProblemCategoryInfo {
+  id: ProblemCategory;
+  title: string;
+  description: string;
+  icon: string;
+  formulas: CategoryFormula[];
+}
+
+export interface CategoryFormula {
+  name: string;
+  formula: string;
+  description: string;
+  variables: { [key: string]: string };
+}
