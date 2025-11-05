@@ -50,7 +50,7 @@
 
 .flow-diagram-container {
   position: relative;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -75,7 +75,7 @@
 }
 
 .element-box {
-  fill: white;
+  fill: #374151;
   stroke: #2563eb;
   stroke-width: 3;
   transition: all 0.3s;
@@ -91,7 +91,7 @@
 
 
 .element-box.selected {
-  fill: #dbeafe;
+  fill: #1e3a8a;
   stroke: #1e40af;
   stroke-width: 4;
   filter: drop-shadow(0 4px 12px rgba(37, 99, 235, 0.5));
@@ -195,6 +195,7 @@
 
 /* Tła dla etykiet */
 .label-bg {
+  fill: rgba(55, 65, 81, 0.95) !important;
   transition: all 0.2s;
 }
 
@@ -210,35 +211,39 @@
 /* Cienie dla lepszej czytelności */
 .with-shadow {
   paint-order: stroke fill;
-  stroke: rgba(255, 255, 255, 0.95);
-  stroke-width: 5px;
+  stroke: rgba(31, 41, 55, 0.95);
+  stroke-width: 6px;
   stroke-linejoin: round;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
 }
 
 
 .goods-label {
-  fill: #047857;
+  fill: #6EE7B7;
+  font-weight: 700;
 }
 
 .factors-label {
-  fill: #1e40af;
+  fill: #93C5FD;
+  font-weight: 700;
 }
 
 .spending-label {
-  fill: #2563eb;
+  fill: #60A5FA;
+  font-weight: 700;
 }
 
 .income-label {
-  fill: #059669;
+  fill: #A7F3D0;
+  font-weight: 700;
 }
 
 
 .flow-value {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   text-anchor: middle;
-  fill: #374151;
+  fill: #f9fafb;
   pointer-events: none;
 }
 
@@ -252,23 +257,28 @@
 }
 
 .tax-label {
-  fill: #dc2626;
+  fill: #fca5a5;
+  font-weight: 700;
 }
 
 .transfer-label {
-  fill: #059669;
+  fill: #6EE7B7;
+  font-weight: 700;
 }
 
 .gov-label {
-  fill: #2563eb;
+  fill: #93C5FD;
+  font-weight: 700;
 }
 
 .import-label {
-  fill: #dc2626;
+  fill: #fca5a5;
+  font-weight: 700;
 }
 
 .export-label {
-  fill: #059669;
+  fill: #6EE7B7;
+  font-weight: 700;
 }
 
 
@@ -329,7 +339,7 @@
 }
 
 .close-info:hover {
-  background-color: #fee2e2;
+  background-color: #7f1d1d;
   color: #ef4444;
 }
 
@@ -392,7 +402,7 @@
   font-family: 'Courier New', monospace;
   font-size: 0.95rem;
   padding: 0.5rem;
-  background-color: var(--text-color);
+  background-color: var(--primary-light);
   border-radius: 0.375rem;
   margin: 0.5rem 0;
   color: var(--text-color);
@@ -443,7 +453,7 @@
 .value-input label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #4b5563;
+  color: var(--text-color);
 }
 
 

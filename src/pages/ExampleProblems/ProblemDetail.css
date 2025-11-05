@@ -175,10 +175,11 @@
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   font-size: 0.95rem;
+  color: #93c5fd;
 }
 
 .givens-list strong {
-  color: #9ca3af;
+  color: #6ee7b7;
   display: block;
   margin-bottom: 0.25rem;
   font-size: 0.85rem;
@@ -253,11 +254,18 @@
 }
 
 .solution-step {
-  background: var(--box-bg);
+  background: #1e3a8a;
   border-radius: 10px;
   padding: 1.5rem;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #3b82f6;
   position: relative;
+  color: var(--text-color);
+}
+
+.solution-step p,
+.solution-step li,
+.solution-step div {
+  color: var(--text-color);
 }
 
 .step-header {
@@ -268,7 +276,7 @@
 }
 
 .step-number {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #1e40af;
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
@@ -291,8 +299,22 @@
   gap: 0.8rem;
 }
 
-.step-description {
-  color: #9ca3af;
+.step-content p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.step-content ul, .step-content ol {
+  color: var(--text-color);
+}
+
+.step-content li {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.step-content .step-description {
+  color: #6ee7b7 !important;
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
@@ -349,7 +371,7 @@
 
 
 .calculation-explanation {
-  color: #718096;
+  color: #9ca3af;
   font-size: 0.85rem;
   margin-bottom: 0.4rem;
   font-style: italic;
@@ -357,7 +379,7 @@
 
 
 .calculation-result {
-  color: #667eea;
+  color: #93c5fd;
   font-size: 1rem;
   margin-top: 0.4rem;
 }
@@ -367,16 +389,17 @@
 }
 
 .step-result {
-  background: var(--bg-color);
+  background: #064e3b;
   padding: 0.8rem 1.2rem;
   border-radius: 8px;
   border-left: 4px solid #48bb78;
   font-size: 1rem;
+  color: var(--text-color);
 }
 
 
 .step-result strong {
-  color: #22543d;
+  color: #6ee7b7;
 }
 
 
@@ -385,7 +408,7 @@
   padding: 0.8rem;
   border-radius: 8px;
   border-left: 4px solid #f6ad55;
-  color: #744210;
+  color: #fbbf24;
   font-size: 0.9rem;
   display: flex;
   align-items: flex-start;
@@ -400,7 +423,7 @@
 }
 
 .final-answer-item {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #064e3b;
   color: white;
   padding: 1rem 1.2rem;
   border-radius: 8px;
@@ -408,6 +431,7 @@
   gap: 0.8rem;
   align-items: center;
   font-size: 1rem;
+  border: 2px solid #48bb78;
 }
 
 .answer-label {

@@ -52,7 +52,7 @@
 }
 
 .company-card {
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border: 2px solid var(--border-color);
   border-radius: 0.75rem;
   padding: 1.5rem;
@@ -114,7 +114,7 @@
 }
 
 .remove-btn:hover {
-  background-color: #fee2e2;
+  background-color: #7f1d1d;
 }
 
 
@@ -139,7 +139,7 @@
 .input-group label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #4b5563;
+  color: var(--text-color);
 }
 
 
@@ -169,7 +169,7 @@
 .value-added-result label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #4b5563;
+  color: var(--text-color);
 }
 
 
@@ -183,14 +183,14 @@
 }
 
 .result-value.positive {
-  background-color: #d1fae5;
+  background-color: #064e3b;
   border-color: var(--success-color);
   color: var(--success-color);
 }
 
 
 .result-value.negative {
-  background-color: #fee2e2;
+  background-color: #7f1d1d;
   border-color: var(--error-color);
   color: var(--error-color);
 }
@@ -199,11 +199,11 @@
 .warning-message {
   margin-top: 1rem;
   padding: 0.75rem 1rem;
-  background-color: #fef3c7;
+  background-color: #451a03;
   border-left: 4px solid var(--primary-dark);
   border-radius: 0.5rem;
   font-size: 0.875rem;
-  color: #92400e;
+  color: var(--primary-dark);
 }
 
 
@@ -254,7 +254,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.25rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.5rem;
 }
 

@@ -14,7 +14,7 @@
   gap: 1.5rem;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
@@ -143,7 +143,7 @@
 .rounds-visualization {
   margin: 2rem 0;
   padding: 1.5rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
@@ -191,7 +191,7 @@
 
 
 .table-row.active {
-  background-color: var(--success-light);
+  background-color: #064e3b;
   border-color: var(--success-dark);
   font-weight: 600;
 }
@@ -236,7 +236,7 @@
 .convergence-info {
   margin-top: 1.5rem;
   padding: 1rem;
-  background-color: #dbeafe;
+  background-color: #1e3a8a;
   border-radius: 0.5rem;
   border-left: 4px solid var(--primary-color);
 }

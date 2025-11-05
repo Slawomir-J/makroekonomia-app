@@ -36,7 +36,7 @@
 
 .input-section {
   padding: 1.5rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
@@ -160,7 +160,7 @@
 
 .result-card {
   padding: 1.5rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
@@ -266,20 +266,20 @@
 }
 
 .calc-step .success {
-  color: var(--success-text);
+  color: var(--success-color);
   font-weight: 700;
   padding: 0.5rem;
-  background-color: var(--success-light);
+  background-color: #064e3b;
   border-radius: 0.375rem;
   margin-top: 0.5rem !important;
-  border: 2px solid var(--success-medium);
+  border: 2px solid var(--success-color);
 }
 
 
 .chart-section {
   margin: 2rem 0;
   padding: 2rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
@@ -311,9 +311,9 @@
 .interpretation-box {
   margin-top: 2rem;
   padding: 1.5rem;
-  background-color: #dbeafe;
+  background-color: #064e3b;
   border-radius: 0.75rem;
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid var(--success-color);
 }
 
 

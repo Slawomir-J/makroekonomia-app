@@ -33,7 +33,7 @@
   gap: 2rem;
   margin-bottom: 2rem;
   padding: 2rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
@@ -122,7 +122,7 @@
 
 .result-card {
   padding: 1.5rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
@@ -264,7 +264,7 @@
 .scenario-analysis {
   margin: 2rem 0;
   padding: 2rem;
-  background-color: var(--text-color);
+  background-color: var(--box-bg);
   border-radius: 0.75rem;
   border: 2px solid var(--border-color);
 }
@@ -306,35 +306,35 @@
 }
 
 .scenario-box.expansionary {
-  background-color: #d1fae5;
+  background-color: #064e3b;
   border-color: #10b981;
 }
 
 
 .scenario-box.expansionary h5 {
-  color: #065f46;
+  color: var(--success-color);
 }
 
 
 .scenario-box.neutral {
-  background-color: #dbeafe;
+  background-color: #1e3a8a;
   border-color: #3b82f6;
 }
 
 
 .scenario-box.neutral h5 {
-  color: #1e40af;
+  color: var(--primary-color);
 }
 
 
 .scenario-box.restrictive {
-  background-color: #fee2e2;
+  background-color: #7f1d1d;
   border-color: #ef4444;
 }
 
 
 .scenario-box.restrictive h5 {
-  color: #991b1b;
+  color: #ef4444;
 }
 
 
@@ -351,9 +351,9 @@
 .interpretation-box {
   margin-top: 2rem;
   padding: 1.5rem;
-  background-color: #dbeafe;
+  background-color: #064e3b;
   border-radius: 0.75rem;
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid var(--success-color);
 }
 
 
